@@ -11,9 +11,9 @@ E-mail: <input type="text" name="email"><br>
 <input type="submit">
 </form>
 
-<li><a href="http://t4ls.duckdns.org:8080/sql.php">SQL Test</a></li>
-<li><a href="http://t4ls.duckdns.org:8080/readsql.php">read testmail</a></li>
-<li><a href="http://t4ls.duckdns.org:8080/clearsql.php">clear testmail</a></li>
+<li><a href="sql.php">SQL Test</a></li>
+<li><a href="readsql.php">read testmail</a></li>
+<li><a href="clearsql.php">clear testmail</a></li>
 
 <br><br><br><br><br><br>
 <img src="programmer.png">
