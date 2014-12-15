@@ -1,0 +1,58 @@
+<html>
+
+
+<!-- Mirrored from cs.wmich.edu/~yang/teach/cs4430/RelationalAlgebra.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 15 Dec 2014 23:52:04 GMT -->
+<head>
+<meta http-equiv="Content-Type"
+content="text/html; charset=iso-8859-1">
+<meta name="GENERATOR" content="Microsoft FrontPage 12.0">
+<title>CS543 Assignment 1</title>
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000">
+
+<h1>CS4430 Assignment 1: Relational Algebra</h1>
+
+<hr>
+
+<p>Assume a book store has a mail-order database with the
+following schema of relations: (Primary keys are underlined.
+Meaning of each attribute is self-explanatory by its name.)</p>
+
+<p>EMPLOYEES: &lt;<u>ENO</u>, ENAME, ZIP, HIRE_DATE&gt;; <br>
+BOOKS: &lt;<u>ISBN</u>, BNAME, QUANTITY, PRICE&gt;;<br>
+CUSTOMERS: &lt;<u>CNO</u>, CNAME, STREET, ZIP, PHONE&gt;;<br>
+ORDERS: &lt;<u>ONO</u>, CNO, ENO, RECEIVED, SHIPPED&gt;; <br>
+ORDER_DETAILS: &lt;<u>ONO, ISBN</u>, QTY&gt;; <br>
+ZIPCODES: &lt;<u>ZIP</u>, CITY, STATE&gt;;</p>
+
+<p>Convert the following queries into relational algebraic
+expressions: </p>
+
+<ol>
+    <li>list customers (names) the zip of whose address is either
+        49008 or 49009. </li>
+    <li>list employees (names) who have customers in Indiana.</li>
+    <li>list employees (names) who have both 49008-zipcode
+        customers and 49009-zipcode customers.</li>
+    <li>list customers (CNOs and names) who live in Kalamazoo,
+        excluding a special customer who's CNO is 1111.</li>
+    <li>list customers (names) who've ordered books through an
+        employee named 'Jones'.</li>
+    <li>list customers (names) who've NOT ordered the book &quot;Database
+        Systems&quot;.</li>
+    <li>all possible pairs of books (BNAMEs). (Don't include 2 of
+        the same books in a pair).</li>
+    <li>all possible pairs of books (BNAMEs) where the first has
+        a price of 24.99 and the second has a price of 19.99.</li>
+    <li>customers (names) who ordered at least one book that
+        customer #1111 ordered.</li>
+    <li>customers (names) who ordered all the books as customer #11111
+        ordered (although, they may have ordered additional books).</li>
+</ol>
+<p>Prepare your answers using a word processor and submit to the WMU e-learning 
+portal.</p>
+</body>
+
+<!-- Mirrored from cs.wmich.edu/~yang/teach/cs4430/RelationalAlgebra.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 15 Dec 2014 23:52:04 GMT -->
+</html>

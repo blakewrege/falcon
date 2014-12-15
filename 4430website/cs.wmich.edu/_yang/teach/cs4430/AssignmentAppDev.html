@@ -1,0 +1,103 @@
+<!-- saved from url=(0022)http://internet.e-mail -->
+<html>
+
+
+<!-- Mirrored from cs.wmich.edu/~yang/teach/cs4430/AssignmentAppDev.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 15 Dec 2014 23:52:04 GMT -->
+<head>
+<meta http-equiv="Content-Type"
+content="text/html; charset=iso-8859-1">
+<meta name="GENERATOR" content="Microsoft FrontPage 12.0">
+<title>Database Application Development</title>
+<style type="text/css">
+.auto-style1 {
+	margin-left: 40px;
+}
+</style>
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000">
+
+<h1>CS4430 Assignment: Application development</h1>
+
+<hr>
+
+<p>This assignment uses the same example schema as used in the relational
+algebra assignment:</p>
+
+<pre class="auto-style1">
+EMPLOYEES (<u>ENO</u>, ENAME, ZIP, HIRE_DATE);
+PARTS (<u>PNO</u>, PNAME, QUANTITY_ON_HAND, UNIT_PRICE, LEVEL);
+CUSTOMERS (<u>CNO</u>, CNAME, STREET, ZIP, PHONE);
+ORDERS (<u>ONO</u>, CNO, ENO, RECEIVED, SHIPPED);
+ORDER_LINE (<u>ONO</u>, <u>PNO</u>, QTY);
+ZIPCODES (<u>ZIP</u>, CITY);</pre>
+
+<p>Run SQL script <a href="create_mail.sql">create_mail.sql</a> to create
+the
+above schema.</p>
+<p>Write an interactive text-based program using C, Java, or PHP. It
+repeatedly gives the user a menu of options to choose from, then carry out
+their
+request, until he/she finally choose the exit option. Tasks include the
+following:</p>
+<ol>
+	<li>add a customer</li>
+	<li>add an order</li>
+	<li>remove an order</li>
+	<li>ship an order</li>
+	<li>print pending order list with customer information</li>
+	<li>restock parts</li>
+	<li>exit</li>
+</ol>
+<p>Keep in mind the following when you write your code:</p>
+<ul>
+	<li>User will be promoted to enter the necessary info, one field at a
+name.</li>
+	<li>When enter a new customer:<ul>
+		<li>CNO should be automatically generated. (e.g. the biggest existing
+		number + 1).</li>
+		<li>ZIP should exist in ZIPCODES table. If not, add the entry into
+		ZIPCODES by asking for CITY.</li>
+	</ul>
+	</li>
+	<li>When add an order:<ul>
+		<li>Add to both ORDERS and ORDER_LINE. ONO and RECEIVED should be
+		automatically filled.</li>
+		<li>Pay attention to the foreign key constraints on CNO, ENO and PNO.</li>
+		<li>Update the part's QUANTITY_ON_HAND.</li>
+		<li>The order should be rejected if it makes the updated
+		QUANTITY_ON_HAND&nbsp; &lt; 0.</li>
+	</ul>
+	</li>
+	<li>When remove an order:<ul>
+		<li>Delete the entry in both the ORDER and the ORDER_LINE tables.
+		However, your code should only have to deal with the ORDER table, the
+		DBMS should handle the ORDER_LINE table automatically.</li>
+		<li>NEVER forget to restock parts (update the QUANTITY_ON_HAND
+		attribute)</li>
+	</ul>
+	</li>
+	<li>When printing pending order list:<ul>
+		<li>Print only pending orders (i.e. orders have not been shipped).</li>
+		<li>Print them in the order of received time.</li>
+	</ul>
+	</li>
+	<li>Appropriate error-checking and error-handling is expected.</li>
+	<li>A user might enter a new record whose key already exists in the table.
+	Handle this appropriately.</li>
+	<li>Always assume the way it works in real world, if the above rules are
+not
+	clear or not enough.</li>
+</ul>
+<p><i>For information on how to use MySQL connectors, please refer to
+<a
+href="http://dev.mysql.com/doc/refman/5.5/en/connectors-apis.html">http://de
+v.mysql.com/doc/refman/5.5/en/connectors-apis.html</a>.</i></p>
+<p><i>Your program should interact using plain text only. To make compiling and 
+grading easier, do not use graphics or any other fancy interface. Put your source code and a README file (describing how to compile your
+code) into a zip file and submit to e-learning. </i></p>
+
+</body>
+
+<!-- Mirrored from cs.wmich.edu/~yang/teach/cs4430/AssignmentAppDev.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 15 Dec 2014 23:52:05 GMT -->
+</html>

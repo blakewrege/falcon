@@ -1,0 +1,102 @@
+﻿<!-- saved from url=(0022)http://internet.e-mail -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+<!-- Mirrored from cs.wmich.edu/~yang/teach/cs4430/SQLContraints.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 15 Dec 2014 23:52:04 GMT -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>SQL Assignment</title>
+<style type="text/css">
+.auto-style1 {
+	margin-left: 40px;
+}
+</style>
+</head>
+
+<body>
+
+<h1>CS4430 Assignment 3: SQL Constraints and Triggers</h1>
+<p>This assignment asks you to write integrity constraints and triggers in SQL. 
+It uses the same database schema as used in the SQL query assignment.</p>
+<p>Express each of the following requirements in SQL unless it is
+implied
+by the existing primary and foreign key constraints; if so, explain how it is 
+implied. If a requirement cannot be expressed in SQL, say so. Consider each 
+requirement independently. For each requirement,
+state what
+operations (inserts, deletes, and updates on specific relations) must be
+monitored by the database server to enforce it.</p>
+<p>You are suggested to express the requirements in MySQL syntex and get them 
+verified in MySQL. Please note that MySQL does not support ASSERTION. You can 
+still use assertion to express a requirement. Just keep in mind that MySQL 
+cannot help you to verify the correctness of your assertion.</p>
+<p>Prepare your answers in a plain text file and submit to e-learning.</p>
+<h3>Exercise 1: University</h3>
+<p>This exercise uses the following relations:</p>
+<pre class="auto-style1">
+Student(snum:integer, sname:string, major:string, level:string, age:integer)
+Class(cname:string, meets_at:time, room:string, fid:integer)
+Enrolled(snum:integer, cname:string)
+Faculty (fid:integer, fname:string, deptid:integer)
+</pre>
+<p>Express each of the following requirements in SQL:</p>
+<ol>
+	<li>Every class has a maximum
+enrollment
+	of 30 students.</li>
+	<li>At least one dass meets in each room.</li>
+	<li>Every faculty member must teach at least two courses.</li>
+	<li>Only faculty in the department with deptid=33 teach more than three
+courses.</li>
+	<li>Every student must be enrolled in a course called Math101.</li>
+	<li>The department with the most faculty members must have fewer than twice
+	the number of faculty members in the department with the fewest faculty
+members.</li>
+	<li>No department can have more than 10 faculty members.</li>
+	<li>The number of CS majors must be more than the number of Math
+majors.</li>
+	<li>The number of distinct courses in which CS majors are enrolled is
+greater
+	than the number of distinct courses in which Math majors are enrolled.</li>
+	<li>The total enrollment in courses taught by faculty in the department with 
+	deptid=33 is greater than the number of Math majors.</li>
+	<li>There must be at least one CS major if there are any students
+whatsoever.</li>
+	<li>Faculty members from different departments cannot teach in the same
+room.</li>
+</ol>
+<h3>Exercise 2: Company</h3>
+<p>Consider the following relational schema. An employee can work in more than 
+one department; the pct-time field of the Works relation shows the percentage of 
+time that a given employee works in a given department. </p>
+<pre class="auto-style1">
+Emp(eid:integer, ename:string, age:integer, salary:real)
+Works(eid:integer, did:integer, pct_time:integer)
+Dept(did:integer, dname:string, budget:real, managerid:integer)
+</pre>
+<p>Express each of the following requirements in SQL:</p>
+<ol>
+	<li>Employees must make a minimum salary of $1000.</li>
+	<li>Every manager must also be an employee.</li>
+	<li>The total percentage of all appointments for an employee must be under
+100%.</li>
+	<li>A manager must always have a higher salary than any employee that he or
+	she manages.</li>
+	<li>Whenever an employee is given a raise, the manager's salary must be
+increased
+	to be at least as much.</li>
+	<li>Whenever an employee is given a raise, the manager's salary must be
+increased
+	to be at least as much. Further, whenever an employee is given a raise, the
+	department's budget must be increased to be greater than the sum of
+salaries
+	of all employees in the department.</li>
+</ol>
+
+</body>
+
+
+<!-- Mirrored from cs.wmich.edu/~yang/teach/cs4430/SQLContraints.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 15 Dec 2014 23:52:04 GMT -->
+</html>

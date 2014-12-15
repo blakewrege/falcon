@@ -1,0 +1,69 @@
+<html>
+
+
+<!-- Mirrored from cs.wmich.edu/~yang/teach/cs4430/AssignmentDBDesign.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 15 Dec 2014 23:52:05 GMT -->
+<head>
+<meta http-equiv="Content-Type"
+content="text/html; charset=iso-8859-1">
+<meta name="GENERATOR" content="Microsoft FrontPage 12.0">
+<title>CS543 Assignment 2</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<h1>CS4430 Assignment 5: Database Design</h1>
+
+<hr>
+
+<p>Let us suppose that WMU Registrar's Office needs a database to
+handle students' transcript data. </p>
+
+<p>The database keeps track of each student's name, WIN, current
+address &amp; phone, permanent address &amp; phone, birthdate,
+sex, level (freshman, sophomore, ......, master, phd), major (a 4-char code), 
+and home department. Some applications
+need to refer individually to the city, state (2-char abbrv.) and
+zip code (some use 5-digit, some use 9) of the students' address.
+Some applications need to refer to students' first and last names
+separately. WIN is unique to the student.</p>
+
+<p>Each department has a name, a 4-char code, location (main
+building and room number), office phone, college, and a list of
+instructors.&nbsp; Department codes are unique within the
+university.</p>
+
+<p>Each instructor has his/her WIN, first name and last name.</p>
+
+<p>The course catalog contains the list of courses which WMU
+offers. Each course has a number (e.g. 4430), name, description,
+credit hours &amp; department. Course numbers are unique within a
+department, but not unique across the university (so taken
+together, they are unique). Not every course is offered every
+semester.</p>
+
+<p>Each section has a single instructor (first and last names -
+no team-taught class), semester, year (4-digit), course
+number and section number. </p>
+
+<p>A grade report contains the student's name, WIN, course number
+&amp; section, letter grade (A, BA, B, ..., E, X, I).</p>
+
+<p><em>Note: If the above user requirements leave out any
+important detail, assume that it is handled the way WMU does
+things in the real world.</em></p>
+
+<hr>
+
+<p>This assignment has two parts:</p>
+
+<ul>
+<li>Conceptual Design: Draw an E-R diagram of the above information.</li>
+<li>Logical Design: Convert the E-R diagram to a relational schema. Express the 
+schema using SQL CREATE TABLE statements, with proper primary keys and foreign 
+keys identified.</li>
+</ul>
+<p>Prepare your submission in Word or PDF format and submit to e-learning.</p>
+</body>
+
+<!-- Mirrored from cs.wmich.edu/~yang/teach/cs4430/AssignmentDBDesign.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 15 Dec 2014 23:52:05 GMT -->
+</html>
