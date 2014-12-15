@@ -1,0 +1,36 @@
+###################################################################################
+# RawCdData.csv   (a data file)
+#		
+# [NOTE:  .csv stands for Comma-Separated-Values TEXT file].
+#
+# LoadCdData.sql is the script file which loads this data into the cds table.
+#     (It assumes that the table & database have already been CREATEd).
+#     (It deletes any data already in the table before loading this data).
+#
+# NOTE:  Unlike INSERT, there are no ( ); around each line.
+#
+# NOTE:  Quotes are optional around string fields, EXCEPT they're needed
+#         in the 5th title since it contains commas within the title string.
+#
+# NOTE:  NULL may be used here, but null may NOT.
+#         NULL can be specified for an AUTO_INCREMENT column or a string column,
+#         but not for numeric data type columns.
+#
+# NOTE:  This MUST specify all 6 columns' values (unlike for INSERTs) rather than
+#         relying on the DB schema's DEFAULT values to be used.
+#
+# FIELDS:  id, title, artist, category, numInStock, price
+###################################################################################
+
+54,'Your Honor','Foo Fighters','POP',22,18.99
+96,'Monkeybusiness','Black Eyed P','POP',12,13.50
+6,It\'s GOT A QUOTE,'O\'Leary','LAT',1,9.99
+77,Out Of Season,Beth Gibbons,ALT,21,16.98
+90,'Love, Angel, Music',Gwen Stefani,POP,15,17.95
+43,Breakaway,Kelly Clarks','COU',9,12.00
+84,X & Y,Coldplay,POP,30,13.99
+NULL,O Sole Mio,Pavarotti,CLA,2,9.00
+NULL,Round Midnight,Charlie Park,NULL,0,15.00
+NULL,Forget About It,Alison Kraus,NULL,0,15.00
+34,Emancipation of Mimi,Mariah Carey,POP,0,9.50
+NULL,4th Door,Randon Myles,WOR,10,9.50

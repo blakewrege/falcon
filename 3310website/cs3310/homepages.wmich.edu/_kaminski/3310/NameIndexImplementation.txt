@@ -1,0 +1,50 @@
+NameIndex implementation issues
+
+[read DataTableImplementation FAQ 1st for
+    further details on the issues below]
+
+The NameIndex MUST be implemented as BOTH:
+1) an INTERNAL table (not an external table)
+2) a SEQUENTIAL LIST data structure
+    [i.e., in sequence by the KEY value, name]
+
+HOWEVER, you may implement this as ANY of these
+options:
+- parallel arrays:
+        - the keyValue, name
+        - the dataRecordPtr (DRP), id
+- an array of records (an array of objects)
+- an array list so the keyValue is searchable,
+    and once located, then the DRP is immediately
+    knowable without any searching
+
+This could be EITHER:
+- static array(s) of size MAX_ARRAY_SIZE
+- OR dynamic arrays
+
+Location [0] WILL BE USED since there is
+  NO CONNECTION between storage location any
+  field in the record.
+
+EVERYTHING to do with the nameIndex MUST be hidden
+inside the NameIndex class (or one of its "subclasses",
+if you choose to further modularize as compared to
+my requirements specs, e.g., NameIndexRecord class
+if you're using an array of objects approach).
+
+Setup might use EITHER of the following, since there
+will be NO SEARCHING of this index during Setup.
+EITHER:
+1 - nameIndex is kept as a sequential list the whole
+  time, and every INSERT results in a sequential list
+  (e.g., kind of using insertion sort)
+OR
+2 - nameIndex is kept as a plain (unsorted) list and
+  INSERTs happen at location N as the nextEmpty spot.
+  Then in FinishUp, the index is sorted on name
+  just before it's dumped to the Backup file.
+HOWEVER, during UserApp, its call to nameIndex.Insert
+  must result in this ALWAYS being a sequential list.
+  So maybe it's best if Insert is implemented using
+  approach 1 so that you don't need 2 Insert methods
+  in nameIndex.

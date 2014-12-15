@@ -1,0 +1,37 @@
+A Binary data file (as the term is used in CS3310)
+means that it is “not an ASCII (Unicode) TEXT file”
+because numeric fields are actually stored as numbers.
+
+So the file can NOT be viewd using NotePad or WordPad.
+It can be view by either:
+    - a program like PrettyPrintUtility
+    - OR a HexEditor on Windows
+	(or use od on Linux/Unix)
+
+A binary data file typically follows these rules since the files
+aren't meant for human readers.  Programs will read the data, so
+why waste space on human "nice-ities".
+- numeric fields are stored as numeric data types:
+   int/short/long, float/double
+   (and the file-writing method must not convert them to digits
+    like println and writeln do)
+- if using fixed-length "strings" (as we are for A3) then
+   - alphabetic fields are stored as char arrays (not strings)
+   - no <CR><LF> after each record - not needed
+   - no field-separator character (like a comma) - not needed
+- don't use use serialization
+- don't worry about big-endian/little-endian conversion,
+   just write out numeric fields as they’re stored internally
+
+
+NOTE:  In general, the design decisions to use
+		- a binary file or a text file
+		- random access or not
+		- serial or key-seq or direct address or hashing or. . . 
+		- fixed-length records or variable-length records
+	are ALL SEPARATE DECISIONS.
+	That is,
+		I could've asked you to use a binary file for A2.
+		I could've specified a text file for A3, even 
+			though it uses hashing.
+

@@ -1,0 +1,9 @@
+There are NO test cases for duplicate ID's (in either
+the A2RawDataSample.csv file nor the IN transactions in
+the A2TransData?.txt files).  So you don't have to 
+include code for such checking in your program.
+
+Assume some other part of the system (program or 
+manual procedure) did the data validation for this!
+
+There are also no test cases for duplicate names.

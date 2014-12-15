@@ -1,0 +1,625 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  
+<!-- Mirrored from homepages.wmich.edu/~kaminski/3310/java/JavaExamples.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 15 Dec 2014 13:20:55 GMT -->
+<head>
+    <meta content="text/html; charset=windows-1252"
+      http-equiv="content-type">
+    <title>CS3310 - Kaminski - Java Examples</title>
+    <meta http-equiv="Content-Type" content="text/html;
+      charset=windows-1252">
+    <meta name="ProgId" content="Word.Document">
+    <meta name="Generator" content="Microsoft Word 12">
+    <meta name="Originator" content="Microsoft Word 12">
+    <meta content="Donna Kaminski" name="author">
+  </head>
+  <body style=" color: rgb(0, 0, 0); background-color: rgb(255, 204,
+    153);" alink="#000099" link="#000099" vlink="#990099">
+    <h2 style="text-align: center; font-family: Comic Sans MS; color:
+      rgb(102, 51, 0); font-weight: bold;"><font size="+2">CS3310 -
+        Kaminski</font></h2>
+    <h2 style="text-align: right; font-family: Arial; color: rgb(0, 0,
+      0); font-weight: normal;"><font size="-2">7/28/14</font></h2>
+    <div style="text-align: right;">
+      <div style="text-align: left;"><font size="+1"><span style="color:
+            rgb(255, 0, 0); font-family: Comic Sans MS;"></span></font><font
+          size="+1"><span style="color: rgb(255, 0, 0); font-family:
+            Comic Sans MS;"></span></font><font size="+1"><span
+            style="color: rgb(255, 0, 0); font-family: Comic Sans MS;"><font
+              size="+2">Java examples of file handling issues</font></span></font><br>
+      </div>
+      <span style="color: rgb(255, 0, 0); font-family: Comic Sans MS;"></span>
+      <div style="text-align: left;"><span style="color: rgb(255, 0, 0);
+          font-family: Comic Sans MS;"></span>
+        <table style="text-align: left; width: 100%;" cellpadding="2"
+          cellspacing="2" border="2">
+          <tbody>
+            <tr>
+              <td colspan="3" rowspan="1" style="vertical-align: top;"><font
+                  style="font-family: Arial;" size="-1">N<font size="-2">OTES:<br>
+                    0) Java code examples by J.Ekema based on C#
+                    examples by D.Kaminski.<br>
+                  </font></font><font style="font-family: Arial;"
+                  size="-2">1) Projects created with NetBeans.</font><font
+                  size="-2"><a href="files/PR2PProgramOne.java">./files/PR2PProgramOne.java</a><br>
+                </font><font style="font-family: Arial;" size="-2">2)
+                  Read examples in order shown since many build on prior
+                  examples.<br>
+                  3) As demo examples, these only use small simple
+                  files, little/no actual processing of data is done and
+                  program structure may be less modularized (&amp; not
+                  use OOP) to focus on the target programming/Java
+                  concept.<br>
+                  4) Read comments besides code to better understand
+                  concepts being demo'd.&nbsp; Click <span
+                    style="color: rgb(255, 0, 0);">.java</span> links to
+                  view <font style="font-family: Courier New;">.java</font>
+                  files &amp; comments directly.</font><br>
+              </td>
+            </tr>
+            <tr>
+              <td style="vertical-align: top; font-family: Comic Sans
+                MS; color: rgb(102, 51, 0); font-weight: bold;"><font
+                  size="-1">1<br>
+                </font> </td>
+              <td style="vertical-align: top; background-color: rgb(255,
+                255, 204);">What if an output <span style="font-weight:
+                  bold; color: rgb(0, 0, 0);">file isn't closed</span><span
+                  style="color: rgb(0, 0, 0);"></span>?<br>
+              </td>
+              <td style="vertical-align: top; background-color: rgb(255,
+                255, 204);"><a href="www.cs.wmich.edu/_cs1110.html"><span
+                    style="font-family: Courier New;"></span></a><a
+                  href="NotCloseOutFile.zip">NotCloseOutFile.zip</a>&nbsp;&nbsp;
+
+                <a href="files/NotCloseOutFile.java"><font
+                    style="color: rgb(255, 0, 0);" size="-2"><span
+                      style="font-family: Comic Sans MS;">Prjava</span></font></a><br>
+              </td>
+            </tr>
+            <tr>
+              <td style="vertical-align: top; font-family: Comic Sans
+                MS; color: rgb(102, 51, 0); font-weight: bold;"><font
+                  size="-1">2<br>
+                </font> </td>
+              <td style="vertical-align: top; background-color: rgb(255,
+                255, 204);">Using <span style="font-family: Courier
+                  New; color: rgb(0, 0, 0); font-weight: bold;">FileInputStream</span>
+                (&amp; converting :&nbsp; byteArray &lt;--&gt; string) <br>
+              </td>
+              <td style="vertical-align: top; background-color: rgb(255,
+                255, 204);"><a href="UsingFileInputStream.zip">UsingFileInputStream.zip</a>&nbsp;
+
+                <a href="files/UsingFileInputStream.java"><font
+                    style="color: rgb(255, 0, 0);" size="-2"><span
+                      style="font-family: Comic Sans MS;">Pr.java</span></font></a>
+              </td>
+            </tr>
+            <tr>
+              <td style="vertical-align: top; font-family: Comic Sans
+                MS; color: rgb(102, 51, 0); font-weight: bold;"><font
+                  size="-1">3a<br>
+                  <br>
+                  <br>
+                  3b</font> <font size="-1"><br>
+                </font> </td>
+              <td style="vertical-align: top; background-color: rgb(255,
+                255, 204);">Which loop structure to use to read &amp;
+                process an input file's records:<br style="color: rgb(0,
+                  0, 0);">
+                <span style="color: rgb(0, 0, 0);">&nbsp;&nbsp;&nbsp; "</span><span
+                  style="font-weight: bold; color: rgb(0, 0, 0);">read/process</span><span
+                  style="color: rgb(0, 0, 0);">" OR "</span><span
+                  style="font-weight: bold; color: rgb(0, 0, 0);">process/read</span><span
+                  style="color: rgb(0, 0, 0);"> (with priming read
+                  before loop)"?</span><span style="color: rgb(0, 0,
+                  0);"></span><br>
+                <br>
+                (There's a bug - is it a problem in the PROGRAM or the
+                DATA)?<br>
+              </td>
+              <td style="vertical-align: top; background-color: rgb(255,
+                255, 204);"><a href="ReadLoopStructure.zip">ReadLoopStructure.zip</a>&nbsp;
+
+                <a href="files/ReadLoopStructure.java"><font
+                    style="color: rgb(255, 0, 0);" size="-2"><span
+                      style="font-family: Comic Sans MS;">Pr.java</span></font></a><br>
+                <font face="Helvetica, Arial, sans-serif" size="-2"><font
+                    face="Comic Sans MS">&nbsp;&nbsp;&nbsp; <a
+                      href="files/FileReaderLoops.java"><font
+                        color="#ff0000">ScannerLoops.java</font></a><br>
+                    &nbsp;&nbsp;&nbsp; <a
+                      href="files/FileReaderLoops.java"></a><a
+                      href="files/FileReaderLoops.java"><font
+                        color="#ff0000">FileReaderLoops.java</font></a><br>
+                    <font color="#ff0000">&nbsp;&nbsp;&nbsp; </font><a
+                      href="files/FileInputStreamLoops.java"><font
+                        color="#ff0000">FileInputStreamLoops.java</font></a></font>
+                  <br>
+                </font> <a href="ExtraMissingCRLF.zip">ExtraMissingCRLF.zip</a>&nbsp;
+
+                <a href="files/ExtraMissingCRLF.java"><font
+                    style="color: rgb(255, 0, 0);" size="-2"><span
+                      style="font-family: Comic Sans MS;">Pr.java</span></font></a>
+              </td>
+            </tr>
+            <tr>
+              <td style="vertical-align: top; font-family: Comic Sans
+                MS; color: rgb(102, 51, 0); font-weight: bold;"><font
+                  size="-1"><br>
+                  4a<br>
+                  <br>
+                  4b</font> <font size="-1"><br>
+                  <br>
+                  4c</font> <font size="-1"><br>
+                  4d<br>
+                </font> </td>
+              <td style="vertical-align: top; background-color: rgb(255,
+                255, 204);">Using<span style="font-weight: bold;">
+                  classes</span> for handling<span style="font-weight:
+                  bold;"> files</span> &amp; <span style="font-weight:
+                  bold;">records</span>. . .&nbsp; Also, do the files
+                have:<span style="font-weight: bold;"><br>
+                </span>&nbsp; &nbsp; - <span style="font-weight: bold;
+                  color: rgb(0, 0, 0);">variable-length records</span><span
+                  style="color: rgb(0, 0, 0);">/fields (using </span><span
+                  style="font-weight: bold; color: rgb(0, 0, 0);">CSV</span><span
+                  style="color: rgb(0, 0, 0);">, comma-separated values)</span><br
+                  style="color: rgb(0, 0, 0);">
+                <font size="-1"><span style="font-style: italic; color:
+                    rgb(0, 0, 0);">&nbsp;&nbsp;&nbsp; &nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [This example uses </span><span
+                    style="color: rgb(0, 0, 0); font-weight: bold;
+                    font-style: italic;">classes for files</span><span
+                    style="font-style: italic; color: rgb(0, 0, 0);">,
+                    but not for records]</span><span style="color:
+                    rgb(0, 0, 0);">.</span></font><br style="color:
+                  rgb(0, 0, 0);">
+                <span style="color: rgb(0, 0, 0);">&nbsp; &nbsp; - </span><span
+                  style="font-weight: bold; color: rgb(0, 0, 0);">fixed-length
+
+
+
+
+
+
+
+
+
+
+
+
+
+                  records</span><span style="color: rgb(0, 0, 0);">/fields
+
+
+
+
+
+
+
+
+
+
+
+
+
+                  (with no field-separators)</span><br style="color:
+                  rgb(0, 0, 0);">
+                <font size="-1"><span style="font-style: italic; color:
+                    rgb(0, 0, 0);">&nbsp; &nbsp; &nbsp; &nbsp;
+                    &nbsp;&nbsp;&nbsp; [This example uses </span><span
+                    style="color: rgb(0, 0, 0); font-weight: bold;
+                    font-style: italic;">classes for files and for
+                    records</span><span style="font-style: italic;
+                    color: rgb(0, 0, 0);">]</span><span style="color:
+                    rgb(0, 0, 0);">.</span></font><br style="color:
+                  rgb(0, 0, 0);">
+                <span style="font-weight: bold; color: rgb(0, 0, 0);">Converting</span><span
+                  style="color: rgb(0, 0, 0);"> between fixed &amp;
+                  variable length fields.</span><br>
+                Should there be a <font style="font-family: Courier
+                  New;" size="-1"><a
+                    href="Other%20files/SeparateFileClass.html">SeparateFileClass(pdf)</a></font>
+                and/or a separate Record class?<br>
+              </td>
+              <td style="vertical-align: top; background-color: rgb(255,
+                255, 204);"><a href="FileClVarLenRec.zip">FileClVarLenRec.zip</a>&nbsp;
+
+                <a href="files/FileClVarLenRec.java"><font
+                    style="color: rgb(255, 0, 0);" size="-2"><span
+                      style="font-family: Comic Sans MS;">Pr.java</span></font></a>
+                <br>
+                <font face="Comic Sans MS" size="-2">&nbsp;&nbsp;&nbsp;
+                  <a href="files/FCInputFile.java"><font
+                      color="#ff0000">InFile.java</font></a>&nbsp;&nbsp;&nbsp;
+
+
+                  <a href="files/FCOutputFile.java"><font
+                      color="#ff0000">OutFile.java</font></a></font><br>
+                <a href="FileClRecClFixLenRec.zip">FileClRecClFixLenRec.zip</a>&nbsp;
+
+                <a href="files/FileClRecClFixLenRec.java"><font
+                    style="color: rgb(255, 0, 0);" size="-2"><span
+                      style="font-family: Comic Sans MS;">Pr.java</span></font></a><br>
+                <font size="-2"><font face="Comic Sans MS">&nbsp;&nbsp;&nbsp;
+
+
+                    <a href="files/FCRCInputFile.java"><font
+                        color="#ff0000">InFile.java</font></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+                    <a href="files/FCRCInputRec.java"><font
+                        color="#ff0000">InRec.java</font></a><br>
+                    &nbsp;&nbsp;&nbsp; <a
+                      href="files/FCRCOutputFile.java"><font
+                        color="#ff0000">OutFile.java</font></a>&nbsp;
+                    &nbsp; <a href="files/FCRCOutputRec.java"><font
+                        color="#ff0000">OutRec.java</font></a></font><br>
+                </font><a href="ConvFixVarFields.zip">ConvFixVarFields.zip</a>&nbsp;
+
+
+                <a href="files/ConvFixVarFields.java"><font
+                    style="color: rgb(255, 0, 0);" size="-2"><span
+                      style="font-family: Comic Sans MS;">Pr.java</span></font></a><br>
+                <font face="Comic Sans MS" size="-2">&nbsp;&nbsp;&nbsp;
+                  <a href="files/ConvFixVarFields.java"><font
+                      color="#ff0000">Converter.java</font></a></font><br>
+              </td>
+            </tr>
+            <tr>
+              <td style="vertical-align: top; font-family: Comic Sans
+                MS; color: rgb(102, 51, 0); font-weight: bold;"><font
+                  size="-1"><br>
+                  5a<br>
+                  5b<br>
+                  <br>
+                  5c</font> <font size="-1"><br>
+                  5d<br>
+                  <br>
+                </font> </td>
+              <td style="vertical-align: top; background-color: rgb(255,
+                255, 204);">Some options for the structure &amp;
+                execution-control of an application :<br>
+                &nbsp;&nbsp;&nbsp; - App contains <span
+                  style="font-weight: bold; color: rgb(0, 0, 0);">2+
+                  programs</span><span style="color: rgb(0, 0, 0);">,
+                  each separately executable.</span><br style="color:
+                  rgb(0, 0, 0);">
+                <span style="color: rgb(0, 0, 0);">&nbsp;&nbsp;&nbsp; -
+                  2+ programs in an app </span><span
+                  style="font-weight: bold; color: rgb(0, 0, 0);">share
+                  a separate class</span><span style="color: rgb(0, 0,
+                  0);"> (in a separate code file).</span><br
+                  style="color: rgb(0, 0, 0);">
+                <span style="color: rgb(0, 0, 0); font-style: italic;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+
+
+
+
+
+
+
+
+
+
+
+                  <font size="-1">[MessageClass is in programTwo's
+                    package.&nbsp; See 7a for class in its own package]</font></span>.<br
+                  style="color: rgb(0, 0, 0);">
+                <span style="color: rgb(0, 0, 0);">&nbsp;&nbsp;&nbsp; -
+                  A </span><span style="font-weight: bold; color:
+                  rgb(0, 0, 0);">driver program</span><span
+                  style="color: rgb(0, 0, 0);"> is added to above
+                  example - it runs the 2 other programs.</span><br
+                  style="color: rgb(0, 0, 0);">
+                <span style="color: rgb(0, 0, 0);">&nbsp;&nbsp;&nbsp; -
+                  A test driver program runs a program multiple times
+                  with </span><span style="font-weight: bold; color:
+                  rgb(0, 0, 0);">different test files</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+(specifying
+                different fileNames as parameters).<br>
+              </td>
+              <td style="vertical-align: top; background-color: rgb(255,
+                255, 204);"><a href="AppHas2Prog.zip">AppHas2Prog.zip</a><br>
+                <font size="-2">&nbsp;&nbsp;&nbsp; </font><a
+                  href="files/Program1.java"><font style="color:
+                    rgb(255, 0, 0);" size="-2"><span style="font-family:
+                      Comic Sans MS;">Pr1.java</span></font></a><font
+                  size="-2">&nbsp;&nbsp;&nbsp; </font><a
+                  href="files/Program2.java"><font color="#ff0000"
+                    face="Comic Sans MS" size="-2">Pr2.java</font></a><br>
+                <a href="TwoProgShareClass.zip">TwoProgShareClass.zip</a><br>
+                &nbsp;&nbsp; <a href="files/ProgramOne.java"><font
+                    style="color: rgb(255, 0, 0);" size="-2"><span
+                      style="font-family: Comic Sans MS;">Pr1.java</span></font></a><font
+                  face="Comic Sans MS" size="-2"> &nbsp; <a
+                    href="files/ProgramTwo.java"><font color="#ff0000">Pr2.java</font></a>&nbsp;&nbsp;
+                  <a href="files/MessageClass.java"><font
+                      color="#ff0000">SharedClass.java</font></a></font><br>
+                <a href="ProgRuns2Progs.zip">ProgRuns2Progs.zip</a>&nbsp;
+
+                <a href="files/PR2PDriverProgram.java"><font
+                    style="color: rgb(255, 0, 0);" size="-2"><span
+                      style="font-family: Comic Sans MS;">Driver.java</span></font></a><span
+                  style="font-family: Comic Sans MS; color: rgb(255, 0,
+                  0);"></span><br>
+                <font face="Comic Sans MS" size="-2">&nbsp;&nbsp;&nbsp;
+                  <a href="files/PR2PProgramOne.java"><font
+                      color="#ff0000">Pr1.java</font></a>&nbsp;&nbsp;&nbsp;
+
+                  <a href="files/PR2PProgramTwo.java"><font
+                      color="#ff0000">Pr2.java</font></a> &nbsp; <a
+                    href="files/PR2PMessageClass.java"><font
+                      color="#ff0000">SharedClass.java</font></a></font><br>
+                <a href="TestDriver.zip">TestDriver.zip</a><span
+                  style="font-family: Comic Sans MS; color: rgb(255, 0,
+                  0);"></span>&nbsp; <a
+                  href="files/TDriverProgram.java"><font style="color:
+                    rgb(255, 0, 0);" size="-2"><span style="font-family:
+                      Comic Sans MS;">Driver.java</span></font></a><br>
+                <font size="-2">&nbsp;&nbsp;&nbsp;<a
+                    href="files/TDisplayProgram.java"><font
+                      color="#ff0000" face="Comic Sans MS"> Pr.java</font></a></font><br>
+                <span style="font-family: Comic Sans MS; color: rgb(255,
+                  0, 0);"></span> </td>
+            </tr>
+            <tr>
+              <td style="vertical-align: top; font-family: Comic Sans
+                MS; color: rgb(102, 51, 0); font-weight: bold;"><font
+                  size="-1">6a<br>
+                  <br>
+                  <br>
+                  6b</font> <font size="-1"><br>
+                </font> </td>
+              <td style="vertical-align: top; background-color: rgb(255,
+                255, 204);">Create a <span style="color: rgb(0, 0, 0);">
+                </span><span style="font-weight: bold; color: rgb(0, 0,
+                  0);">random access</span><span style="color: rgb(0, 0,
+                  0);"> text file (with a direct address file structure)</span><br
+                  style="color: rgb(0, 0, 0);">
+                <span style="color: rgb(0, 0, 0);">&nbsp; &nbsp; &amp;
+                  process it with random access (query it) and
+                  sequential access (dump it).</span><br style="color:
+                  rgb(0, 0, 0);">
+                <span style="font-style: italic; color: rgb(0, 0, 0);">&nbsp;&nbsp;&nbsp;<font
+                    size="-1"> [Uses </font></span><font size="-1"><span
+                    style="font-family: Courier New; font-style: italic;
+                    color: rgb(0, 0, 0);">RandomAccessFile</span><span
+                    style="font-style: italic; color: rgb(0, 0, 0);">,
+                    calculating offset, and </span><span
+                    style="font-family: Courier New; color: rgb(0, 0,
+                    0); font-weight: bold; font-style: italic;">seek</span><span
+                    style="font-style: italic; color: rgb(0, 0, 0);">\.</span></font><br
+                  style="color: rgb(0, 0, 0);">
+                <span style="color: rgb(0, 0, 0);">Do </span><span
+                  style="color: rgb(0, 0, 0); font-weight: bold;">empty-location
+
+
+
+
+
+
+
+
+
+
+
+
+
+                  checking</span> (and "rws" mode).<br>
+              </td>
+              <td style="vertical-align: top; background-color: rgb(255,
+                255, 204);"><a href="RandomAccess.zip">RandomAccess.zip</a><font
+                  size="-1"><span style="font-family: Comic Sans MS;
+                    color: rgb(255, 0, 0);"></span></font>&nbsp; <a
+                  href="files/CreateProgram.java"><font style="color:
+                    rgb(255, 0, 0);" size="-2"><span style="font-family:
+                      Comic Sans MS;">Create.java</span></font></a><br>
+                <font face="Comic Sans MS" size="-2">&nbsp;&nbsp;&nbsp;&nbsp;
+                  <a href="files/QueryProgram.java"><font
+                      color="#ff0000">RandomRead.java</font></a>&nbsp;&nbsp;&nbsp;
+                  <a href="files/DumpProgram.java"><font
+                      color="#ff0000">SeqRead.java</font></a><br>
+                  &nbsp;&nbsp;&nbsp;&nbsp; <a
+                    href="files/RanFile.java"><font color="#ff0000">RandomFileClass.java</font></a></font><br>
+                <a href="RanAccCkforEmpty.zip">RanAccCkforEmpty.zip</a>&nbsp;
+                <a href="files/RanAccCkforEmpty.java"><font
+                    style="color: rgb(255, 0, 0);" size="-2"><span
+                      style="font-family: Comic Sans MS;">Pr.java</span></font></a><font
+                  size="-1"><span style="font-family: Comic Sans MS;
+                    color: rgb(255, 0, 0);"></span></font> </td>
+            </tr>
+            <tr>
+              <td style="vertical-align: top; font-family: Comic Sans
+                MS; color: rgb(102, 51, 0); font-weight: bold;"><font
+                  size="-1"><br>
+                  <br>
+                  <br>
+                  7a<br>
+                  7b</font> <font size="-1"><br>
+                  7c<br>
+                </font> </td>
+              <td style="vertical-align: top; background-color: rgb(255,
+                255, 204);">Create/write a <span style="font-weight:
+                  bold; color: rgb(0, 0, 0);">binary file</span><span
+                  style="color: rgb(0, 0, 0);"> (vs. text file) &amp;
+                  display/read it.</span><br style="color: rgb(0, 0,
+                  0);">
+                <span style="color: rgb(0, 0, 0);">&nbsp; &nbsp; - using
+                  DataInputStream &amp; DataOutputStream<br>
+                </span><font size="-1"><span style="font-style: italic;
+                    color: rgb(0, 0, 0);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    [Also shows BinFile class in a SEPARATE package from
+                    main programs].<br>
+                  </span></font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                - binary file is just sequential access (not random)<br
+                  style="color: rgb(0, 0, 0);">
+                <span style="color: rgb(0, 0, 0);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  - binary
+                  file
+                  is
+                  also </span><span style="font-weight: bold; color:
+                  rgb(0, 0, 0);">random access</span><span style="color:
+                  rgb(0, 0, 0);"> (besides seq. access).</span><br
+                  style="color: rgb(0, 0, 0);">
+                <span style="color: rgb(0, 0, 0);">&nbsp;&nbsp;&nbsp; -
+                  using Serialization with ObjectOutputStream.</span><span
+                  style="color: rgb(0, 0, 0);"></span><br>
+              </td>
+              <td style="vertical-align: top; background-color: rgb(255,
+                255, 204);"><span style="font-family: Comic Sans MS;
+                  color: rgb(255, 0, 0);"></span><a
+                  href="BinaryStreamReadWrite.zip">BinaryStreamReadWrite.zip</a><br>
+                <font size="-2">&nbsp;&nbsp;&nbsp;
+                </font> <a href="files/BSRWCreateProgram.java"><font
+                    style="color: rgb(255, 0, 0);" size="-2"><span
+                      style="font-family: Comic Sans MS;">Create.java</span></font></a><font
+                  face="Comic Sans MS" size="-2">&nbsp;&nbsp;&nbsp; <a
+                    href="files/BSRWDisplayProgram.java"><font
+                      color="#ff0000">SeqRead.java</font></a><br>
+                  &nbsp;&nbsp;&nbsp; <a href="files/BSRWBinFile.java"><font
+                      color="#ff0000">BinaryFileClass.java</font></a></font><br>
+                <a href="BinRWRandom.zip">BinRWRandom.zip</a><font
+                  size="-1"><span style="font-family: Comic Sans MS;
+                    color: rgb(255, 0, 0);"></span></font>&nbsp; <a
+                  href="files/BRWRCreateProgram.java"><font
+                    style="color: rgb(255, 0, 0);" size="-2"><span
+                      style="font-family: Comic Sans MS;">Create.java</span></font></a><br>
+                <font face="Comic Sans MS" size="-2">&nbsp;&nbsp;&nbsp;&nbsp;
+                  <a href="files/BRWRQueryProgram.java"><font
+                      color="#ff0000">RandomRead.java</font></a>&nbsp;&nbsp;&nbsp;
+                  <a href="files/BRWRDisplayProgram.java"><font
+                      color="#ff0000">SeqRead.java</font></a><br>
+                  &nbsp;&nbsp;&nbsp;&nbsp; <a
+                    href="files/BRWRBinFile.java"><font
+                      color="#ff0000">BinRandomFileClass.java</font></a></font><a
+                  href="files/BRWRCreateProgram.java"><font
+                    style="color: rgb(255, 0, 0);" size="-2"><span
+                      style="font-family: Comic Sans MS;"></span></font></a><br>
+                <a href="CreateSerBinFile.zip">CreateSerBinFile.zip<font
+                    size="-1"><span style="font-family: Comic Sans MS;
+                      color: rgb(255, 0, 0);"></span></font></a>&nbsp; <a
+                  href="files/CreateSerBinFile.java"><font
+                    style="color: rgb(255, 0, 0);" size="-2"><span
+                      style="font-family: Comic Sans MS;">Pr.java</span></font></a><font
+                  face="Comic Sans MS"><br>
+                  <font size="-2">&nbsp;&nbsp;&nbsp; <a
+                      href="files/SerBinFile.java"><font
+                        color="#ff0000">FileClass.java</font></a>&nbsp;&nbsp;&nbsp;
+                    <a href="files/SerBinRec.java"><font
+                        color="#ff0000">RecordClass.java</font></a></font></font><br>
+                <font size="-1"><span style="font-family: Comic Sans MS;
+                    color: rgb(255, 0, 0);"></span></font><font
+                  size="-1"><span style="font-family: Comic Sans MS;
+                    color: rgb(255, 0, 0);"></span></font> </td>
+            </tr>
+            <tr>
+              <td style="vertical-align: top; font-family: Comic Sans
+                MS; color: rgb(102, 51, 0); font-weight: bold;"><font
+                  size="-1">8a<br>
+                  <br>
+                  8b</font> <font size="-1"><br>
+                </font> </td>
+              <td style="vertical-align: top; background-color: rgb(255,
+                255, 204);"><span style="font-weight: bold; color:
+                  rgb(0, 0, 0);">Delete</span><span style="color: rgb(0,
+                  0, 0);"> a file, check if it </span><span
+                  style="font-weight: bold; color: rgb(0, 0, 0);">exists</span><span
+                  style="color: rgb(0, 0, 0);">, check file's </span><span
+                  style="font-weight: bold; color: rgb(0, 0, 0);">size</span><span
+                  style="color: rgb(0, 0, 0);"> (in bytes).</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp; <font size="-1"><span
+                    style="font-style: italic; color: rgb(255, 0, 0);">[IS
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    THIS DANGEROUS. . . LETTING A PROGRAM DELETE A
+                    FILE?]</span></font><br>
+                <span style="color: rgb(0, 0, 0); font-weight: bold;">Append</span><span
+                  style="color: rgb(0, 0, 0);"> to an output file.</span><br
+                  style="color: rgb(0, 0, 0);">
+                <font size="-1"><span style="color: rgb(0, 0, 0);">&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+
+
+
+
+                  </span><span style="font-style: italic; color: rgb(0,
+                    0, 0);">[Also shows using a class in a SEPARATE
+                    namespace].</span></font><br>
+              </td>
+              <td style="vertical-align: top; background-color: rgb(255,
+                255, 204);"><a href="DeleteAFile.zip">DeleteAFile.zip</a>&nbsp;
+                <a href="files/DeleteAFile.java"><font style="color:
+                    rgb(255, 0, 0);" size="-2"><span style="font-family:
+                      Comic Sans MS;">Pr.java</span></font></a><br>
+                <br>
+                <a href="AppendingToAFile.zip">AppendingToAFile.zip</a>&nbsp;
+
+
+                <a href="files/AppendingToAFile.java"><font
+                    style="color: rgb(255, 0, 0);" size="-2"><span
+                      style="font-family: Comic Sans MS;">Pr.java</span></font></a><br>
+                <font face="Comic Sans MS" size="-2">&nbsp;&nbsp;&nbsp;
+                  <a href="files/LogFile.java"><font color="#ff0000">LogFileClass.java</font></a></font><br>
+              </td>
+            </tr>
+            <tr>
+              <td valign="top"><br>
+              </td>
+              <td valign="top">Dealing with <b>extended ASCII</b> char
+                in a file (like México) - some options<br>
+              </td>
+              <td valign="top"><a href="ScannerWithExtAscii.txt">ScannerWithExtAscii.txt</a><br>
+                <font face="Comic Sans MS" size="-1"><a
+                    href="BufferedReaderClass.java"><font
+                      color="#ff0000">BufferedReaderClass.java</font></a></font><br>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <span style="color: rgb(255, 0, 0); font-family: Comic Sans MS;"></span><font
+          size="+1"><span style="font-family: Comic Sans MS; color:
+            rgb(255, 0, 0);"></span></font></div>
+      <div style="text-align: center;"><br>
+        <span style="color: rgb(255, 0, 0); font-family: Comic Sans MS;"><font
+            size="-2"><a href="mailto:donna.kaminski@wmich.edu"><span
+                style="color: rgb(0, 0, 0);">Donna Kaminski, Computer
+                Science Department</span></a>&nbsp;</font> &nbsp; </span><span
+          style="color: rgb(255, 0, 0); font-family: Comic Sans MS;"></span><br>
+      </div>
+    </div>
+    <br>
+    <br>
+  </body>
+
+<!-- Mirrored from homepages.wmich.edu/~kaminski/3310/java/JavaExamples.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 15 Dec 2014 13:21:10 GMT -->
+</html>

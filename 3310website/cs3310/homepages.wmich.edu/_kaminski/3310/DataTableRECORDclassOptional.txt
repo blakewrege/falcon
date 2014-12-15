@@ -1,0 +1,8 @@
+Several people have asked whether DataTableRecord class
+was really necessary since there's not much really
+happening in that class (if reading/writing a RECORD to
+the FILE actually got done in the DataTable class).
+
+OK, the DataTableRecord class is optional, if you're
+doing all the file/record/field handling for the table
+in the DataTable class.

@@ -1,0 +1,59 @@
+Minimum Cost Path Algorithm - some things to think about
+  in understanding the algorithm
+  [some refer to Asgn, some to MCP algor in general with ANY data]
+
+1- What should kalamazoo to kalamazoo result in for the distance?
+   the path?  the trace of targets?
+2- Would kalamazoo to traverseCity always result in the same distance
+   answer as traverseCity to kalamazoo?  Would the route itself
+   always be just the reverse?
+3- What does the number of nodes in "trace of targets" tell us?
+   (in plain English)
+4- What's the last city printed out in "trace of targets" when
+   going from kalamazoo to traverseCity?
+   [Assume there's a valid path between the two].
+   Is that guaranteed to be the last one in the trace list?
+5- Which is the SECOND city that will print out in the "trace
+   of targets" when going from kalamazoo to chicago
+   [assuming kalamazoo is FIRST in the list, as start city]?
+   1) Plainwell (14 miles north of Kalamazoo)
+   2) Coloma (45 minutes drive from Kalamazoo)
+   3) Chicago (3 hours away - and the destination)
+   4) PawPaw (because it's at least on the way to Chicago)
+   5) Gary or Benton Harbor or. . . - could be anything on
+      the final finished path to Chicago
+   6) could be ANY city in the whole graph (it depends. . .)
+6- Will every city on the final route appear in the "trace of
+   targets"?
+7- Will every city in the "trace of targets" be part of the
+   final route?
+8- Which module would have the code to printTargetCity:
+    1) main (in UserApp program)
+    2) getCityName (in MapData class)
+    3) loadMapData (in MapData class)
+    4) findShortestRoute (in Route class)
+    5) initializeArrays (in Route class)
+    6) searchForPath (in Route class)
+    7) reportAnswers (in Route class)
+9- Can you describe what each of these modules does (as if you're
+   writing a boxed comment at the top of the module) - in 1 or 2
+   sentences?
+10- What's a module (in your language)?
+11- What's the max size that a typical module should be?
+12- What does initializeArrays do in pseudocode?
+13- What are the 3 supplemental arrays used in Dijkstra's
+    Algorithm called?  [For full credit, apply the "commonly-
+    used terminology" rule.  However, a more important rule
+    you should always apply is the "same terminology as the
+    boss/specs" rule].
+14- Given a specific graph, can you show me what the 3 arrays
+    would look like AFTER initializeArrays is run.
+   -  Do I have to also tell you what startCity is?
+   -  Do I also have to tell you what destinationCity is?
+15- What's the pseudocode for getRoadDistance(a,b) if the map edges
+    were stored as:
+   - AdjacencyLists?
+   - an internal AdjacencyMatrix?
+   - an external AdjacencyMatrix?
+16- Could a final answer path ever be just one edge?
+

@@ -1,0 +1,20 @@
+As compared with A1/A2/A3, this A4 project has
+
+- NO Setup program to prepare the initial data storage
+  structure, and hence no save-to-backup-file needed
+  because the app is continuously running all day during
+  the updating (inserts, deletes) of the data store.
+  Instead, it is created and then used in "UserApp"
+  program, (CrowdOrganizerApp) and then disappears when
+  the program terminates.
+
+- NO PrettyPrintUtility program since there is no external
+  data file storage, nor backup file of the internal
+  storage structure that needs to be views and checked.
+
+- NO TestDriver program because it is only a single program
+  (UserApp) that needs to be run, and only a single
+  transaction test file will be used for A4.
+
+- NO UI class is used in order to simplify the project.
+  User interaction is done in the main controller program

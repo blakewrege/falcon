@@ -1,0 +1,34 @@
+How many objects are declared for a type of class:
+- RawData (in Setup)
+    - only 1 since there's only 1 RawData file
+      (used in 1 run of Setup)
+- UI (in UserApp)
+    - only 1 since there's only 1 TransData
+      file and 1 Log file (used in 1 run of
+      UserApp)
+- DataTable (in Setup, and in UserApp)
+    - only 1 since there's only 1 dataTable
+- NameIndex (in Setup, and in UserApp)
+    - only 1 since there's only 1 nameIndex
+
+And IF YOU USE SEPARATE RECORD CLASSES:
+- RawDataRecord (in Setup)
+    - only 1 since Setup's using the InputStream
+      Processing algorithm where only a SINGLE
+      RECORD is ever in memory at one time and
+      the input stream is an EXTERNAL FILE
+- TransDataRecord (in UserApp
+    - only 1 since UserApp's using the InputStream
+      Processing algorithm where only a SINGLE
+      RECORD is ever in memory at one time and
+      the input stream is an EXTERNAL FILE
+- DataTableRecord (in DataTable)
+    - MANY RECORD OBJECTS since this is an INTERNAL
+      table and ALL the records are in memory
+      during processing of Setup and UserApp
+- NameIndexRecord (in NameIndex)
+    - MANY RECORD OBJECTS since this is an INTERNAL
+      table and ALL the records are in memory
+      during processing of Setup and UserApp
+
+

@@ -1,0 +1,23 @@
+HOW TO print integers as 2-columns
+
+
+For example, we want 25, 7, -1, 0 to print as:
+25
+07
+-1
+00
+
+Console.WriteLine("{0:00;-0;00}", theInt);
+
+After the {0: placeHolder there are 3 options:
+  (separated by SEMI-COLONS)
+  1st one specifies format for positive's:  00
+  2nd one specifies format for negative's:  -0
+  3rd one specifies format for zeroes:      00
+
+The same format string could be used for:
+  string s = string.Format("{0:00;-0;00}", theInt);
+
+
+Thanks to Zak Ford, using reference:
+http://serkansonmez.blogspot.com/2009/02/string-format-for-double-c.html

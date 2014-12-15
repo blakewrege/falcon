@@ -1,0 +1,228 @@
+mysql> source c:/documents and settings/kaminski/my documents/mysql/musicfiles/CreateMusicDB.sql
+--------------
+DROP DATABASE IF EXISTS music
+--------------
+
+Query OK, 1 row affected (0.08 sec)
+
+--------------
+CREATE DATABASE music
+--------------
+
+Query OK, 1 row affected (0.00 sec)
+
+Database changed
+--------------
+CREATE TABLE cds
+(
+  id		int		AUTO_INCREMENT	PRIMARY KEY,
+  title		varchar(30)	UNIQUE		NOT NULL,
+  artist	varchar(20),
+  category	char(3)		DEFAULT 'POP',
+  numInStock	smallint	DEFAULT 0,
+  price		decimal(5,2)	DEFAULT 9.50	NOT NULL	
+)
+--------------
+
+Query OK, 0 rows affected (0.11 sec)
+
+--------------
+SHOW TABLES
+--------------
+
++-----------------+
+| Tables_in_music |
++-----------------+
+| cds             | 
++-----------------+
+1 row in set (0.00 sec)
+
+--------------
+SHOW COLUMNS IN cds
+--------------
+
++------------+--------------+------+-----+---------+----------------+
+| Field      | Type         | Null | Key | Default | Extra          |
++------------+--------------+------+-----+---------+----------------+
+| id         | int(11)      | NO   | PRI | NULL    | auto_increment | 
+| title      | varchar(30)  | NO   | UNI | NULL    |                | 
+| artist     | varchar(20)  | YES  |     | NULL    |                | 
+| category   | char(3)      | YES  |     | POP     |                | 
+| numInStock | smallint(6)  | YES  |     | 0       |                | 
+| price      | decimal(5,2) | NO   |     | 9.50    |                | 
++------------+--------------+------+-----+---------+----------------+
+6 rows in set (0.05 sec)
+
+mysql> source c:/documents and settings/kaminski/my documents/mysql/musicfiles/InsertCdData.sql
+--------------
+INSERT INTO cds VALUES
+  (54, 'Your Honor',           'Foo Fighters', 'POP',  22, 18.99)
+--------------
+
+Query OK, 1 row affected (0.03 sec)
+
+--------------
+INSERT INTO cds VALUES
+  (96, 'Monkeybusiness',       'Black Eyed P', 'POP',  12, 13.50)
+--------------
+
+Query OK, 1 row affected (0.00 sec)
+
+--------------
+INSERT INTO cds VALUES
+  ( 6, 'It\'s GOT A QUOTE',    'O\'Leary',     'LAT',   1,  9.99)
+--------------
+
+Query OK, 1 row affected (0.02 sec)
+
+--------------
+INSERT INTO cds VALUES
+  (77, 'Out Of Season',        'Beth Gibbons', 'ALT',  21, 16.98),
+  (90, 'Love, Angel, Music',   'Gwen Stefani', 'POP',  15, 17.95),
+  (43, 'Breakaway',            'Kelly Clarks', 'COU',   9, 12.00)
+--------------
+
+Query OK, 3 rows affected (0.01 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
+--------------
+INSERT INTO cds VALUES
+  (84,  'X & Y',               'Coldplay',     'POP',  30, 13.99),
+  (NULL,'O Sole Mio',          'Pavarotti',    'CLA',   2,  9.00),
+  (null,'Round Midnight',      'Charlie Park',  NULL,   0, 15.00),
+  (null,'Forget About It',     'Alison Kraus',  NULL,   0, 15.00)
+--------------
+
+Query OK, 4 rows affected (0.02 sec)
+Records: 4  Duplicates: 0  Warnings: 0
+
+--------------
+INSERT INTO cds VALUES
+  (59,  'Survivor',            'Destinys Ch',  'SOU', 211,  4.91),
+  (44,  'Fireflies',           'Faith Hill',   'COU',   9,  9.99),
+  (50,   NULL,                 'BadNullTitle', 'OLD',  48, 15.99),
+  (54,  'DUPL ID (1st Insert)','Dup ID (1st)', 'POP',   0,  9.99),
+  ( 2,  'Your Honor',          'DupTitle(1st)','ROC', 123, 45.67),
+  (11,  'American Idiot',      'Green Day',    'POP',  24,  NULL),
+  (83,  'Our Love is a Ghost', 'Bowery',       'BALLAD', 1, 9.99)
+--------------
+
+ERROR 1048 (23000): Column 'title' cannot be null
+--------------
+INSERT INTO cds VALUES
+  (96, 'USA:  United States',  'Ying Yang Tw', 'POP',  31, 13.01)
+--------------
+
+ERROR 1062 (23000): Duplicate entry '96' for key 'PRIMARY'
+--------------
+INSERT INTO cds VALUES 
+  (10, 'Monkeybusiness',       'U2',           'ROC', 123, 45.67)
+--------------
+
+ERROR 1062 (23000): Duplicate entry 'Monkeybusiness' for key 'title'
+--------------
+INSERT INTO cds (id, title, artist) VALUES
+  (34, 'Emancipation of Mimi', 'Mariah Carey')
+--------------
+
+Query OK, 1 row affected (0.19 sec)
+
+--------------
+INSERT INTO cds SET
+  title = '4th Door',
+  artist = 'Randon Myles',
+  category = 'WOR',
+  numInStock = 10
+--------------
+
+Query OK, 1 row affected (0.00 sec)
+
+--------------
+SELECT * FROM cds
+--------------
+
++-----+----------------------+--------------+----------+------------+-------+
+| id  | title                | artist       | category | numInStock | price |
++-----+----------------------+--------------+----------+------------+-------+
+|   6 | It's GOT A QUOTE     | O'Leary      | LAT      |          1 |  9.99 | 
+|  34 | Emancipation of Mimi | Mariah Carey | POP      |          0 |  9.50 | 
+|  43 | Breakaway            | Kelly Clarks | COU      |          9 | 12.00 | 
+|  54 | Your Honor           | Foo Fighters | POP      |         22 | 18.99 | 
+|  77 | Out Of Season        | Beth Gibbons | ALT      |         21 | 16.98 | 
+|  84 | X & Y                | Coldplay     | POP      |         30 | 13.99 | 
+|  90 | Love, Angel, Music   | Gwen Stefani | POP      |         15 | 17.95 | 
+|  96 | Monkeybusiness       | Black Eyed P | POP      |         12 | 13.50 | 
+|  97 | O Sole Mio           | Pavarotti    | CLA      |          2 |  9.00 | 
+|  98 | Round Midnight       | Charlie Park | NULL     |          0 | 15.00 | 
+|  99 | Forget About It      | Alison Kraus | NULL     |          0 | 15.00 | 
+| 101 | 4th Door             | Randon Myles | WOR      |         10 |  9.50 | 
++-----+----------------------+--------------+----------+------------+-------+
+12 rows in set (0.00 sec)
+
+--------------
+SELECT * FROM cds
+  ORDER BY title
+--------------
+
++-----+----------------------+--------------+----------+------------+-------+
+| id  | title                | artist       | category | numInStock | price |
++-----+----------------------+--------------+----------+------------+-------+
+| 101 | 4th Door             | Randon Myles | WOR      |         10 |  9.50 | 
+|  43 | Breakaway            | Kelly Clarks | COU      |          9 | 12.00 | 
+|  34 | Emancipation of Mimi | Mariah Carey | POP      |          0 |  9.50 | 
+|  99 | Forget About It      | Alison Kraus | NULL     |          0 | 15.00 | 
+|   6 | It's GOT A QUOTE     | O'Leary      | LAT      |          1 |  9.99 | 
+|  90 | Love, Angel, Music   | Gwen Stefani | POP      |         15 | 17.95 | 
+|  96 | Monkeybusiness       | Black Eyed P | POP      |         12 | 13.50 | 
+|  97 | O Sole Mio           | Pavarotti    | CLA      |          2 |  9.00 | 
+|  77 | Out Of Season        | Beth Gibbons | ALT      |         21 | 16.98 | 
+|  98 | Round Midnight       | Charlie Park | NULL     |          0 | 15.00 | 
+|  84 | X & Y                | Coldplay     | POP      |         30 | 13.99 | 
+|  54 | Your Honor           | Foo Fighters | POP      |         22 | 18.99 | 
++-----+----------------------+--------------+----------+------------+-------+
+12 rows in set (0.00 sec)
+
+mysql> source c:/documents and settings/kaminski/my documents/mysql/musicfiles/LoadCdData.sql
+--------------
+DELETE FROM cds
+--------------
+
+Query OK, 12 rows affected (0.03 sec)
+
+--------------
+LOAD DATA
+  INFILE
+  'c:/documents and settings/kaminski/my documents/mysql/MusicFiles/RawCdData.csv'
+  INTO TABLE cds
+  FIELDS TERMINATED BY ','
+	OPTIONALLY ENCLOSED BY '\''	
+  LINES TERMINATED BY '\r\n'		
+  IGNORE 20 LINES
+--------------
+
+Query OK, 12 rows affected (0.05 sec)
+Records: 12  Deleted: 0  Skipped: 0  Warnings: 0
+
+--------------
+SELECT * FROM cds
+--------------
+
++-----+----------------------+---------------+----------+------------+-------+
+| id  | title                | artist        | category | numInStock | price |
++-----+----------------------+---------------+----------+------------+-------+
+|   6 | It's GOT A QUOTE     | O'Leary       | LAT      |          1 |  9.99 | 
+|  34 | Emancipation of Mimi | Mariah Carey  | POP      |          0 |  9.50 | 
+|  43 | Breakaway            | Kelly Clarks' | COU      |          9 | 12.00 | 
+|  54 | Your Honor           | Foo Fighters  | POP      |         22 | 18.99 | 
+|  77 | Out Of Season        | Beth Gibbons  | ALT      |         21 | 16.98 | 
+|  84 | X & Y                | Coldplay      | POP      |         30 | 13.99 | 
+|  90 | Love, Angel, Music   | Gwen Stefani  | POP      |         15 | 17.95 | 
+|  96 | Monkeybusiness       | Black Eyed P  | POP      |         12 | 13.50 | 
+| 102 | O Sole Mio           | Pavarotti     | CLA      |          2 |  9.00 | 
+| 103 | Round Midnight       | Charlie Park  | NULL     |          0 | 15.00 | 
+| 104 | Forget About It      | Alison Kraus  | NULL     |          0 | 15.00 | 
+| 105 | 4th Door             | Randon Myles  | WOR      |         10 |  9.50 | 
++-----+----------------------+---------------+----------+------------+-------+
+12 rows in set (0.00 sec)
+
+mysql> notee

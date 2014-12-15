@@ -1,0 +1,22 @@
+Orig.txt file was created in NotePad on a PC.
+It was ftp'd from a PC (Windows system) to a webserver
+     (a Unix-based system)
+  - 1st using ASCII mode  (A mode) -->>  A.txt
+  - 2nd using BINARY mode (B mode) -->>  B.txt
+
+ASCII mode transfers a file, CONVERTING IT to the 
+      RECEIVING MACHINE'S NATIVE TEXT FILE FORMAT.
+  In this case, since it's a Unix system as the recipient
+      (which uses a <LF> as the line-separator and not
+      <CR><LF> as Windows does), a CONVERSION HAPPENS,
+      where \r\n's are replaced with just \n's.
+
+BINARY mode transfers a file EXACTLY AS IS, byte-by-byte.
+
+NOTE:  the default in many ftp apps (like FileZilla) is
+  to use "automatic" mode, using A mode for supposedly
+  text files - i.e., anything with a file extension of
+  .txt .java .cs .sql (etc.) and B mode for all other
+  file types.  The list of text file extensions, which
+  is changeable, is in the options/settings.
+

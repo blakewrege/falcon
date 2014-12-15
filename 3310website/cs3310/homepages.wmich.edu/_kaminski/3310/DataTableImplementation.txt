@@ -1,0 +1,55 @@
+DataTable implementation issues
+
+The DataTable MUST be implemented as BOTH:
+1) an INTERNAL table (not an external table)
+    [i.e., while processing is happening (e.g.,
+     insert, select/search, delete) the table
+     is all IN MEMORY, and NOT on a FILE.
+     It is only on the Backup file as a way
+     to port it from one program execution to
+     another - i.e., from
+     - from Setup to UserApp
+     - from UserApp-today to UserApp-tomorrow.]
+2) a DIRECT ADDRESS data structure
+    [i.e., record with id 17 is stored in 
+     location 17, record with id 208 is stored
+     in location 208.  Those locations are
+     SUBSCRIPTS for an ARRAY since this is an
+     internal table].
+
+HOWEVER, you may implement this as ANY of these
+options:
+- parallel arrays (like the specs indicated)
+- an array of records (an array of objects)
+- an array list IF you do direct address on it
+  [i.e., manually put/get the "record" at the
+      designated location (e.g., location 17)
+      and NOT use some "magic" methods which
+      somehow:
+         - insert a country somewhere in list
+         - find country somehow in the list
+      I don't want the "magic" insert & find
+      to be doing a linear search, just because
+      it's hidden.  I want DIRECT ADDRESS].
+
+This could be EITHER:
+- static array(s) of size MAX_ARRAY_SIZE (a named
+    constant set to 250 for now, should do)
+- OR dynamic arrays (of size as big as needed,
+    which you won't know until Setup has finished).
+
+NOTE:  Location [0] will never be used since no
+  country has id 0.
+
+EVERYTHING to do with the dataTable MUST be hidden
+inside the DataTable class (or one of its "subclasses",
+if you choose to further modularize as compared to
+my requirements specs, e.g., DataTableRecord class
+if you're using an array of objects approach).
+
+There is NO SORTING involved ! ! !  However, since
+DirectAddress is used, the table will just already
+BE in sequence by the keyValue, id. (Well, except
+for some empty holes in the table like at [0] and
+any other location where there is no country with
+that id.

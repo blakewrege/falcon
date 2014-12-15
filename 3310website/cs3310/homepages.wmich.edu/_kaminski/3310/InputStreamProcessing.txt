@@ -1,0 +1,52 @@
+InputStreamProcessing "design pattern".
+
+See notes in project specs at the end.
+
+Setup and UserApp are CONTROLLERS.  They
+don't do any (much) real work.  They call
+public service methods in other classes
+to actually DO THE WORK, like:
+- RawData or UI for input requests
+- DataTable and NameIndex to insert or lookup
+  appropriate data
+
+RawData file and TransData file are both
+input streams, to Setup and UserApp
+respectively.  You will NEVER HAVE THE
+ENTIRE FILE's DATA IN MEMORY AT ONCE - there
+is no need for this.  Both Setup and UserApp
+need only a SINGLE INPUT RECORD's data in
+memory at one time.  So the InputStreamProcessing
+algorithm is used.  That is,
+
+------------------------------------------------
+Get the stream ready (i.e., the constructor
+   opens the file)
+Loop til DoneWithStream
+{
+   1) Input 1 record (send request to RawData or
+         UI to get the necessary data handling)
+   2) Completely deal with that record
+         (i.e., call appropriate method(s) in
+                DataTable and/or NameIndex
+}
+FinishUp with the stream (i.e., the deconstructor-
+   substitute method, called FinishUp, closes
+   the file)
+------------------------------------------------
+
+NOTE:  The above uses a read/process loop structure.
+In your actual coding you might use a process/read
+loop structure with a priming pre-while read.
+
+NOTE:  The only memory you need to allocate for
+either file is 1 record's worth since you never have
+more than 1 record in memory at once.  So you just
+REUSE the same memory for subsequent records, which
+over-write the prior record's data.
+   [Yeah but... each record is a new object, so
+    shouldn't I declare a NEW OBJECT everytime a
+    new record is read?  NO.  Declaring new objects
+    takes time, as does the deconstruction of the
+    object.  I'm wanting to increase run-time efficiency
+    at the expense of a pure OOP approach].

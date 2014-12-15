@@ -1,0 +1,16 @@
+CS “HELP DESK” - room C-208
+- see www.cs.wmich.edu/sysadmin for open times.
+
+They provide help on:
+- programming, debugging, C#, Java, . . .
+- computer support for your PC
+- using the CS computer system (& C)
+- other CEAS resources including printing at Parkview
+- getting/installing MS Visual Studio, NetBeans.
+
+Staff are at different stages in their CS major
+  and have more/less experience with various languages/
+  OS's/topic areas.
+Most will have completed CS3310 (with Kaminski)
+  & CS2230/CS2240 (with Trenary).
+

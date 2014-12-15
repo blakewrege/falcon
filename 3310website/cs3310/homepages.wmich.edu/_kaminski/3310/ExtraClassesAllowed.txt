@@ -1,0 +1,19 @@
+Extra classes, besides the 4 I described in the
+project specs, are allowed.  But you MUST have
+the 4 classes I described at the very least (besides
+the 4 programs I specified).
+
+IF you are implementing dataTable and/or nameIndex
+as arrays of objects, then you'd have separate 
+classes for DataTableRecord and NameIndexRecord.
+
+RawData might be used for file handling AND record
+handling AND field handling for the RawData file's
+data.  OR, you might have a physically separate
+class for RawDataRecord which RawData (responsible
+for FILE handling) uses.
+
+Backup class might be used for dealing with the
+Backup file, rather than DataTable and NameIndex
+both dealing with that file.
+

@@ -1,0 +1,24 @@
+World DB Schema
+    (from http://dev.mysql.com/doc/)
+
+[NOTE:  FK's are NOT specified in the DDL in CreateWorldDB.sql]
+
+
+Country(Code, Name, Continent, Region, SurfaceArea, IndepYear,
+  Population, LifeExpectancy, GNP, GNPOld, LocalName,
+  GovernmentForm, HeadOfState, Capital, Code2)
+
+    PK is Code
+
+
+City(ID, Name, CountryCode, District, Population)
+
+    PK is ID
+    FK is CountryCode which references Code in Country table
+
+
+CountryLanguage(CountryCode, Language, IsOfficial, Percentage)
+
+    PK (composite key) is CountryCode & Language
+    FK is CountryCode which references Code in Country table
+

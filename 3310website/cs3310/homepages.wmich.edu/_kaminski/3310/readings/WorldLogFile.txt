@@ -1,0 +1,56 @@
+Connecting to MySQL...
+OK, the DB Connection is OPENED
+
+
+SQL (1): SELECT Name, Population FROM Country WHERE Region = 'Western Europe' OR Region = 'British Islands'
+
+Country       :  Population
+Austria       :   8,091,800
+Belgium       :  10,239,000
+Switzerland   :   7,160,400
+Germany       :  82,164,700
+France        :  59,225,700
+United Kingdom:  59,623,400
+Ireland       :   3,775,100
+Liechtenstein :      32,300
+Luxembourg    :     435,700
+Monaco        :      34,000
+Netherlands   :  15,864,000
+
+SQL (2): SELECT COUNT(*) FROM Country
+
+239 countries in the World database
+
+SQL (3): UPDATE Country SET HeadOfState = 'Barack Obama'WHERE Name = 'United States'
+
+OK, UPDATE of USA's HeadOfState done
+
+SQL (4): SELECT HeadOfState FROM Country WHERE Name = 'United States'
+
+NEW Head of USA is Barack Obama
+
+SQL (5): INSERT INTO Country (Name, HeadOfState, Continent) VALUES ('Disneyland','Mickey Mouse', 'North America')
+
+OK, INSERT of Disneyland was done
+
+SQL (6): SELECT * FROM Country WHERE Name = 'Disneyland'
+
+The data for Disneyland
+   Code: , Continent: North America, Region: , HeadOfState: Mickey Mouse
+   SurfaceArea: 0, IndepYear: , Population: 0, LifeExpectancy: 
+   GNP: , GNPOld: , LocalName: , GovernmentForm: , Capital: , Code2: 
+   NOTE: Most are default values since no data inserted for most columns
+
+SQL (7): SELECT COUNT(*) FROM Country
+
+240 countries in the World database
+
+SQL (8): DELETE FROM Country WHERE Name = 'Disneyland'
+
+OK, DELETE of Disneyland was done
+
+SQL (9): SELECT COUNT(*) FROM Country
+
+239 countries in the World database
+
+EXITING PROGRAM

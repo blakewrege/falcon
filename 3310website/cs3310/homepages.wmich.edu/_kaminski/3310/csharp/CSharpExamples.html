@@ -1,0 +1,676 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  
+<!-- Mirrored from homepages.wmich.edu/~kaminski/3310/csharp/CSharpExamples.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 15 Dec 2014 13:21:10 GMT -->
+<head>
+    <meta content="text/html; charset=ISO-8859-1"
+      http-equiv="content-type">
+    <title>CS3310 - Kaminski - C# Examples</title>
+    <meta http-equiv="Content-Type" content="text/html;
+      charset=ISO-8859-1">
+    <meta name="ProgId" content="Word.Document">
+    <meta name="Generator" content="Microsoft Word 12">
+    <meta name="Originator" content="Microsoft Word 12">
+    <meta content="Donna Kaminski" name="author">
+  </head>
+  <body style=" color: rgb(0, 0, 0); background-color: rgb(255, 204,
+    153);" alink="#000099" link="#000099" vlink="#990099">
+    <h2 style="text-align: center; font-family: Comic Sans MS; color:
+      rgb(102, 51, 0);"><font size="+2">CS3310 - Kaminski</font></h2>
+    <h2 style="text-align: right; font-family: Arial; color: rgb(0, 0,
+      0);"><font size="-2">8/25/12</font></h2>
+    <div style="text-align: right;"><font size="-2"></font>
+      <div style="text-align: left;"><font size="+1"><span style="color:
+            rgb(255, 0, 0); font-family: Comic Sans MS;"></span></font><font
+          size="+1"><span style="color: rgb(255, 0, 0); font-family:
+            Comic Sans MS;"></span></font><font size="+1"><span
+            style="color: rgb(255, 0, 0); font-family: Comic Sans MS;"><font
+              size="+2">C# examples of file handling issues</font></span></font><br>
+      </div>
+      <span style="color: rgb(255, 0, 0); font-family: Comic Sans MS;"></span>
+      <div style="text-align: left;"><span style="color: rgb(255, 0, 0);
+          font-family: Comic Sans MS;"></span>
+        <table style="text-align: left; width: 100%;" border="2"
+          cellpadding="2" cellspacing="2">
+          <tbody>
+            <tr>
+              <td colspan="3" rowspan="1" style="vertical-align: top;"><font
+                  style="font-family: Arial;" size="-1">N<font size="-2">OTES:<br>
+                  </font></font><font style="font-family: Arial;"
+                  size="-2">1) Projects created with VisualStudio / C#
+                  2008.</font><font size="-2"><br>
+                </font><font style="font-family: Arial;" size="-2">2)
+                  Read examples in order shown since many build on prior
+                  examples.<br>
+                  3) As demo examples, these only use small simple
+                  files, little/no actual processing of data is done and
+                  program structure may be less modularized (&amp; not
+                  use OOP) to focus on the target programming/Java
+                  concept.<br>
+                  4) Read comments besides code to better understand
+                  concepts being demo'd.&nbsp; Click the <big
+                    style="font-family: Comic Sans MS;"><span
+                      style="color: rgb(255, 0, 0);">.cs</span></big>
+                  links to view <font style="font-family: Courier New;">.cs</font>
+                  files &amp; comments in browser.</font><font size="-1"><span
+                    style="font-style: italic; font-family: Arial;"></span><span
+                    style="font-style: italic; font-family: Arial;"><span
+                      style="font-family: Helvetica,Arial,sans-serif;
+                      font-style: italic;"></span></span></font><br>
+              </td>
+            </tr>
+            <tr>
+              <td style="vertical-align: top; font-family: Comic Sans
+                MS; color: rgb(102, 51, 0);">1<br>
+              </td>
+              <td style="vertical-align: top; background-color: rgb(255,
+                255, 204);">What happens if an output <span
+                  style="font-weight: bold; color: rgb(0, 0, 0);">file
+                  isn't closed</span><span style="color: rgb(0, 0, 0);">
+                  in</span><span style="font-weight: bold; color: rgb(0,
+                  0, 0);"></span> C#? &nbsp; (unlike in many languages.
+                . .)<br>
+              </td>
+              <td style="vertical-align: top; background-color: rgb(255,
+                255, 204);"><a href="www.cs.wmich.edu/_cs1110.html"><span
+                    style="font-family: Courier New;"></span></a><a
+                  href="NotCloseOutFile.zip">NotCloseOutFile.zip</a>&nbsp;&nbsp;
+
+                <a href="files/NotCloseOutFile.cs"><font style="color:
+                    rgb(255, 0, 0);" size="-2"><span style="font-family:
+                      Comic Sans MS;">pr.cs</span></font></a><br>
+              </td>
+            </tr>
+            <tr>
+              <td style="vertical-align: top; font-family: Comic Sans
+                MS; color: rgb(102, 51, 0);">2<br>
+              </td>
+              <td style="vertical-align: top; background-color: rgb(255,
+                255, 204);">Using <font size="-1"><span
+                    style="font-family: Courier New; color: rgb(0, 0,
+                    0); font-weight: bold;">FileStream</span></font>
+                (and converting:&nbsp; byteArray &lt;--&gt; string) <br>
+              </td>
+              <td style="vertical-align: top; background-color: rgb(255,
+                255, 204);"><a href="UsingFileStream.zip">UsingFileStream.zip</a>&nbsp;&nbsp;
+
+                <a href="files/UsingFileStream.cs"><font style="color:
+                    rgb(255, 0, 0);" size="-2"><span style="font-family:
+                      Comic Sans MS;">pr.cs</span></font></a> </td>
+            </tr>
+            <tr>
+              <td style="vertical-align: top; font-family: Comic Sans
+                MS; color: rgb(102, 51, 0);">3a<font size="-2"><br>
+                  <br>
+                  <br>
+                </font>3b<br>
+              </td>
+              <td style="vertical-align: top; background-color: rgb(255,
+                255, 204);">Which loop structure should be used in C# to
+                read &amp; process an input file:<br style="color:
+                  rgb(0, 0, 0);">
+                <span style="color: rgb(0, 0, 0);">&nbsp;&nbsp;&nbsp; "</span><span
+                  style="font-weight: bold; color: rgb(0, 0, 0);">read/process</span><span
+                  style="color: rgb(0, 0, 0);">" OR "</span><span
+                  style="font-weight: bold; color: rgb(0, 0, 0);">process/read</span><span
+                  style="color: rgb(0, 0, 0);"> (with a priming read
+                  before the loop)"?</span><br style="color: rgb(0, 0,
+                  0);">
+                <font size="-1"><span style="color: rgb(0, 0, 0);">&nbsp;&nbsp;
+
+                  </span><span style="color: rgb(0, 0, 0);">&nbsp; [Also
+                    shows static classes].</span></font><br>
+                There's a bug.&nbsp; Is the problem in the PROGRAM or
+                the DATA?<br>
+              </td>
+              <td style="vertical-align: top; background-color: rgb(255,
+                255, 204);"><a href="ReadLoopStructure.zip">ReadLoopStructure.zip</a>&nbsp;&nbsp;
+
+                <a href="files/ReadLoopStructure.cs"><font
+                    style="color: rgb(255, 0, 0);" size="-2"><span
+                      style="font-family: Comic Sans MS;">pr.cs</span></font></a><small><small><br>
+                    <font size="-2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font></small></small><a
+                  href="files/StrRdrLoops.cs"><font
+                    style="font-family: Comic Sans MS;" size="-2"><span
+                      style="color: rgb(255, 0, 0);">strRdrCl.cs</span></font></a>&nbsp;
+
+                <a href="files/FileStrLoops.cs"><font size="-2"><span
+                      style="color: rgb(255, 0, 0); font-family: Comic
+                      Sans MS;">fileStrCl.cs</span></font></a><font
+                  size="-2"><span style="color: rgb(255, 0, 0);
+                    font-family: Comic Sans MS;"><br>
+                    <br>
+                  </span></font> <a href="ExtraMissingCRLF.zip">ExtraMissingCRLF.zip</a>&nbsp;&nbsp;
+
+                <a href="files/ExtraMissingCRLF.cs"><font
+                    style="color: rgb(255, 0, 0);" size="-2"><span
+                      style="font-family: Comic Sans MS;">pr.cs</span></font></a>
+              </td>
+            </tr>
+            <tr>
+              <td style="vertical-align: top; font-family: Comic Sans
+                MS; color: rgb(102, 51, 0);">4<br>
+              </td>
+              <td style="vertical-align: top; background-color: rgb(255,
+                255, 204);">What's <span style="color: rgb(0, 0, 0);">"the
+
+
+
+                  record"</span> which the method's using:&nbsp; a
+                record, a line, a set of fields, etc.?<br>
+              </td>
+              <td style="vertical-align: top; background-color: rgb(255,
+                255, 204);"><a href="WhatsTheRecord.html">WhatsTheRecord.pdf</a>&nbsp;
+
+
+
+                <font size="-1"><span style="font-family: Comic Sans MS;
+                    color: rgb(255, 0, 0);">NOT LIVE</span></font></td>
+            </tr>
+            <tr>
+              <td style="vertical-align: top; font-family: Comic Sans
+                MS; color: rgb(102, 51, 0);"><font size="-2"><br>
+                </font>5a<br>
+                <br>
+                5b<br>
+                <font size="-2"><br>
+                </font>5c<br>
+                5d<br>
+              </td>
+              <td style="vertical-align: top; background-color: rgb(255,
+                255, 204);">Using<span style="font-weight: bold;">
+                  classes</span> for handling<span style="font-weight:
+                  bold;"> files</span> and <span style="font-weight:
+                  bold;">records</span>. . .&nbsp; Also, do the files
+                have:<span style="font-weight: bold;"><br>
+                </span>&nbsp; &nbsp; 1) <span style="font-weight: bold;
+                  color: rgb(0, 0, 0);">variable-length records</span><span
+                  style="color: rgb(0, 0, 0);">/fields using </span><span
+                  style="font-weight: bold; color: rgb(0, 0, 0);">.csv</span><span
+                  style="color: rgb(0, 0, 0);">'s</span><span
+                  style="color: rgb(0, 0, 0);">, (comma-separated
+                  values)</span><br style="color: rgb(0, 0, 0);">
+                <span style="font-style: italic; color: rgb(0, 0, 0);">&nbsp;<font
+                    size="-1">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;</font></span><span
+                  style="color: rgb(0, 0, 0);"><font size="-1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+[This
+example
+uses
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                  </font></span><font size="-1"><span style="color:
+                    rgb(0, 0, 0); font-weight: bold;">classes for files</span><span
+                    style="color: rgb(0, 0, 0);">, but not for records]</span><span
+                    style="color: rgb(0, 0, 0);">.</span></font><br
+                  style="color: rgb(0, 0, 0);">
+                <span style="color: rgb(0, 0, 0);">&nbsp; &nbsp; 2) </span><span
+                  style="font-weight: bold; color: rgb(0, 0, 0);">fixed-length
+
+
+
+                  records</span><span style="color: rgb(0, 0, 0);">/fields
+
+
+
+                  (with no field-separators)</span><br style="color:
+                  rgb(0, 0, 0);">
+                <span style="font-style: italic; color: rgb(0, 0, 0);">&nbsp;<font
+                    size="-1"> &nbsp; &nbsp; &nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font></span><span
+                  style="color: rgb(0, 0, 0);"><font size="-1">[This
+                    example uses </font></span><font size="-1"><span
+                    style="color: rgb(0, 0, 0); font-weight: bold;">classes
+
+                    for files</span><span style="color: rgb(0, 0, 0);">
+                    and </span><span style="color: rgb(0, 0, 0);
+                    font-weight: bold;">classes for records</span><span
+                    style="color: rgb(0, 0, 0);">]</span><span
+                    style="color: rgb(0, 0, 0);">.</span></font><br
+                  style="color: rgb(0, 0, 0);">
+                <span style="font-weight: bold; color: rgb(0, 0, 0);">Converting</span><span
+                  style="color: rgb(0, 0, 0);"> between fixed and
+                  variable length fields.</span><br>
+                Should you set up a <font style="font-family: Courier
+                  New;" size="-1"><a href="SeparateFileClass.pdf">SeparateFileClass(pdf)</a></font>
+                and/or a separate Record class?<br>
+              </td>
+              <td style="vertical-align: top; background-color: rgb(255,
+                255, 204);"><br>
+                <a href="FileClVarLenRec.zip">FileClVarLenRec.zip</a>&nbsp;&nbsp;
+
+                <a href="files/FCVarLenRec.cs"><font style="color:
+                    rgb(255, 0, 0);" size="-2"><span style="font-family:
+                      Comic Sans MS;">pr.cs</span></font></a><br>
+                <font style="font-family: Comic Sans MS;" size="-2">&nbsp;
+
+                  &nbsp; &nbsp; <a href="files/FCVarLenRecInFile.cs"><span
+                      style="color: rgb(255, 0, 0);">inCl.cs</span></a>&nbsp;&nbsp;
+
+                  <a href="files/FCVarLenRecOutFile.cs"><span
+                      style="color: rgb(255, 0, 0);">outCl.cs</span></a></font><br>
+                <a href="FileClRecClFixLenRec.zip">FileClRecClFixLenRec.zip</a>&nbsp;&nbsp;
+
+                <a href="files/FCRCFixLenRec.cs"><font style="color:
+                    rgb(255, 0, 0);" size="-2"><span style="font-family:
+                      Comic Sans MS;">pr.cs</span></font></a><br>
+                <font style="font-family: Comic Sans MS;" size="-2">&nbsp;&nbsp;
+
+                  &nbsp;&nbsp; <a href="files/FCRCFixLenRecInFile.cs"><span
+                      style="color: rgb(255, 0, 0);">inFileCl.cs</span></a>
+                  &nbsp;&nbsp; <a href="files/FCRCFixLenRecInRec.cs"><span
+                      style="color: rgb(255, 0, 0);">inRecCl.cs</span></a><br>
+                  &nbsp; &nbsp;&nbsp;&nbsp; <a
+                    href="files/FCRCFixLenRecOutFile.cs"><span
+                      style="color: rgb(255, 0, 0);">outFileCl.cs</span></a></font><font
+                  style="font-family: Comic Sans MS;" size="-2">&nbsp; <a
+                    href="files/FCRCFixLenRecOutRec.cs"><span
+                      style="color: rgb(255, 0, 0);">outRecCl.cs</span></a></font><br>
+                <a href="ConvFixVarFields.zip">ConvFixVarFields.zip</a>&nbsp;&nbsp;
+
+                <a href="files/ConvFixVarFields.cs"><font
+                    style="color: rgb(255, 0, 0);" size="-2"><span
+                      style="font-family: Comic Sans MS;">pr.cs</span></font></a>&nbsp;
+
+                <a href="files/CFVFRecTypeConversion.cs"><font
+                    style="font-family: Comic Sans MS;" size="-2"><span
+                      style="color: rgb(255, 0, 0);">cl.cs</span></font></a><br>
+              </td>
+            </tr>
+            <tr>
+              <td style="vertical-align: top; font-family: Comic Sans
+                MS; color: rgb(102, 51, 0);"><font size="-2"><br>
+                </font>6a<br>
+                6b<font size="-2"><br>
+                  &nbsp;</font><font size="-2"><br>
+                </font>6c<br>
+                6d<br>
+              </td>
+              <td style="vertical-align: top; background-color: rgb(255,
+                255, 204);">Some options regarding the structure and
+                execution-control of an application:<br>
+                &nbsp;&nbsp;&nbsp; - An app can contain <span
+                  style="font-weight: bold; color: rgb(0, 0, 0);">2+
+                  programs</span><span style="color: rgb(0, 0, 0);">,
+                  each separately executable.</span><br style="color:
+                  rgb(0, 0, 0);">
+                <span style="color: rgb(0, 0, 0);">&nbsp;&nbsp;&nbsp; -
+                  2 (or more) programs in an app can </span><span
+                  style="font-weight: bold; color: rgb(0, 0, 0);">share
+                  a separate class</span><span style="color: rgb(0, 0,
+                  0);"> code file.</span><br style="color: rgb(0, 0,
+                  0);">
+                <span style="color: rgb(0, 0, 0); font-style: italic;">&nbsp;&nbsp;</span><small><span
+                    style="color: rgb(0, 0, 0);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+
+                    [Class is in program1's namespace.&nbsp; See 8a for
+                    class in its own namespace]</span></small><br
+                  style="color: rgb(0, 0, 0);">
+                <span style="color: rgb(0, 0, 0);">&nbsp;&nbsp;&nbsp; -
+                  A </span><span style="font-weight: bold; color:
+                  rgb(0, 0, 0);">driver program</span><span
+                  style="color: rgb(0, 0, 0);"> is added to the above
+                  which runs those 2 other programs.</span><br
+                  style="color: rgb(0, 0, 0);">
+                <span style="color: rgb(0, 0, 0);">&nbsp;&nbsp;&nbsp; -
+                  A test driver program runs a program multiple times
+                  with </span><span style="font-weight: bold; color:
+                  rgb(0, 0, 0);">different test files</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+(specifying
+
+
+
+                the fileNames as parameters).<br>
+              </td>
+              <td style="vertical-align: top; background-color: rgb(255,
+                255, 204);"><br>
+                <a href="AppHas2Prog.zip">AppHas2Prog.zip</a>&nbsp;&nbsp;
+
+                <a href="files/AppHas2ProgCreateProgram.cs"><font
+                    style="color: rgb(255, 0, 0);" size="-2"><span
+                      style="font-family: Comic Sans MS;">pr1.cs</span></font></a>&nbsp;
+
+                <a href="files/AppHas2ProgDisplayProgram.cs"><font
+                    style="color: rgb(255, 0, 0); font-family: Comic
+                    Sans MS;" size="-2">pr2.cs</font></a><a
+                  style="color: rgb(255, 0, 0);"
+                  href="/files/AppHas2ProgDisplayProgram.html"><font
+                    size="-2"><span style="font-family: Comic Sans MS;"></span></font></a><br>
+                <a href="TwoProgShareClass.zip">TwoProgShareClass.zip</a>&nbsp;&nbsp;
+
+                <a href="files/TPSCCreateProgram.cs"><font
+                    style="color: rgb(255, 0, 0);" size="-2"><span
+                      style="font-family: Comic Sans MS;">pr1.cs</span></font></a><small><small><br>
+                    &nbsp; &nbsp;&nbsp; &nbsp; <a
+                      href="files/TPSCDisplayProgram.cs"><span
+                        style="color: rgb(255, 0, 0); font-family: Comic
+                        Sans MS;">pr2.cs</span></a>&nbsp;&nbsp; <a
+                      href="files/TPSCTheFile.cs"><span style="color:
+                        rgb(255, 0, 0); font-family: Comic Sans MS;">cl.cs</span></a><br>
+                  </small></small><a href="ProgRuns2Prog.zip">ProgRuns2Prog.zip</a>&nbsp;&nbsp;
+
+                <a href="files/PR2PDriverProgram.cs"><font
+                    style="color: rgb(255, 0, 0);" size="-2"><span
+                      style="font-family: Comic Sans MS;">driverPr.cs</span></font></a><span
+                  style="font-family: Comic Sans MS; color: rgb(255, 0,
+                  0);"></span><font style="font-family: Comic Sans MS;"
+                  size="-2"><br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a
+                    href="files/PR2PCreateProgram.cs"><span
+                      style="color: rgb(255, 0, 0);">pr1.cs</span></a>&nbsp;&nbsp;
+
+                  <a href="files/PR2PDisplayProgram.cs"><span
+                      style="color: rgb(255, 0, 0);">pr2.cs</span></a></font><font
+                  size="-2"> &nbsp; <a href="files/PR2PTheFile.cs"><span
+                      style="color: rgb(255, 0, 0); font-family: Comic
+                      Sans MS;">cl.cs</span></a></font><br>
+                <a href="TestDriver.zip">TestDriver.zip</a><span
+                  style="font-family: Comic Sans MS; color: rgb(255, 0,
+                  0);"></span>&nbsp;&nbsp; <a
+                  href="files/TDDriverProgram.cs"><font style="color:
+                    rgb(255, 0, 0);" size="-2"><span style="font-family:
+                      Comic Sans MS;">driverPr.cs</span></font></a><font
+                  style="font-family: Comic Sans MS;" size="-2">&nbsp;&nbsp;
+
+                  <a href="files/TDDisplayProgram.cs"><span
+                      style="color: rgb(255, 0, 0);">pr.cs</span></a></font><br>
+                <span style="font-family: Comic Sans MS; color: rgb(255,
+                  0, 0);"></span> </td>
+            </tr>
+            <tr>
+              <td style="vertical-align: top; font-family: Comic Sans
+                MS; color: rgb(102, 51, 0);">7a<small><small><br>
+                  </small>&nbsp;<small><br>
+                    <br>
+                  </small></small>7b<br>
+              </td>
+              <td style="vertical-align: top; background-color: rgb(255,
+                255, 204);">Create a <span style="color: rgb(0, 0, 0);">
+                </span><span style="font-weight: bold; color: rgb(0, 0,
+                  0);">random access</span><span style="color: rgb(0, 0,
+                  0);"> text file (with a direct address file structure)</span>
+                (the <a href="RandomFile.txt">file</a>)<br
+                  style="color: rgb(0, 0, 0);">
+                <span style="color: rgb(0, 0, 0);">&nbsp; &nbsp; &amp;
+                  process it with random access (query it) and
+                  sequential access (dump it).</span><br style="color:
+                  rgb(0, 0, 0);">
+                <font size="-1"><span style="font-style: italic; color:
+                    rgb(0, 0, 0);">&nbsp;</span><span style="color:
+                    rgb(0, 0, 0);">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;
+                    [Uses </span><span style="font-family: Courier New;
+                    color: rgb(0, 0, 0);">FileStream</span><span
+                    style="color: rgb(0, 0, 0);">, calculating offset,
+                    and </span><span style="font-family: Courier New;
+                    color: rgb(0, 0, 0); font-weight: bold;">seek</span><span
+                    style="color: rgb(0, 0, 0);">].</span></font><br
+                  style="color: rgb(0, 0, 0);">
+                <span style="color: rgb(0, 0, 0);">Do </span><span
+                  style="color: rgb(0, 0, 0); font-weight: bold;">empty-location
+
+
+
+                  checking</span> (and flush the buffer).<br>
+              </td>
+              <td style="vertical-align: top; background-color: rgb(255,
+                255, 204);"><a href="RandomAccess.zip">RandomAccess.zip</a><font
+                  size="-1"><span style="font-family: Comic Sans MS;
+                    color: rgb(255, 0, 0);"></span></font>&nbsp;&nbsp; <a
+                  href="files/RACreateProgram.cs"><font style="color:
+                    rgb(255, 0, 0);" size="-2"><span style="font-family:
+                      Comic Sans MS;">crPr.cs</span></font></a><font
+                  style="font-family: Comic Sans MS;" size="-2"><br>
+                  &nbsp;&nbsp; &nbsp;&nbsp; <span style="color:
+                    rgb(255, 0, 0);"></span><a
+                    href="files/RAQueryProgram.cs"><span style="color:
+                      rgb(255, 0, 0);">queryPr.cs</span></a>&nbsp;&nbsp;
+                  <a href="files/RADumpProgram.cs"><span style="color:
+                      rgb(255, 0, 0);">dumpPr.cs</span></a>&nbsp;&nbsp;
+                  <a href="files/RARanFile.cs"><span style="color:
+                      rgb(255, 0, 0);">fileCl.cs</span></a>&nbsp;</font>&nbsp;
+
+                <br>
+                <br>
+                <a href="RanAccCkforEmpty.zip">RanAccCkforEmpty.zip</a><font
+                  size="-2">&nbsp;&nbsp;&nbsp; <a
+                    href="files/RanAccCkforEmpty.cs"><span
+                      style="color: rgb(255, 0, 0); font-family: Comic
+                      Sans MS;">pr.cs</span></a></font><font size="-1"><span
+                    style="font-family: Comic Sans MS; color: rgb(255,
+                    0, 0);"></span></font> </td>
+            </tr>
+            <tr>
+              <td style="vertical-align: top; font-family: Comic Sans
+                MS; color: rgb(102, 51, 0);"><small><small><br>
+                  </small></small>8a<small><small><br>
+                  </small>&nbsp;<small><br>
+                  </small></small>8b<br>
+                8c<br>
+                8d<br>
+              </td>
+              <td style="vertical-align: top; background-color: rgb(255,
+                255, 204);">Create/write a <span style="font-weight:
+                  bold; color: rgb(0, 0, 0);">binary file</span><span
+                  style="color: rgb(0, 0, 0);"> (vs. text file) &amp;
+                  then display/read it.</span><br style="color: rgb(0,
+                  0, 0);">
+                <span style="color: rgb(0, 0, 0);">&nbsp; &nbsp; 1)
+                  using <font size="-1"><span style="font-family:
+                      Courier New;">BinaryReader</span></font> &amp; <font
+                    size="-1"><span style="font-family: Courier New;">BinaryWriter</span></font>
+                  (a sequential access <a href="BinaryFile.pdf">binary
+                    file<font size="-1"> (pdf)</font></a> )</span><br
+                  style="color: rgb(0, 0, 0);">
+                <small><span style="font-style: italic; color: rgb(0, 0,
+                    0);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span
+                    style="color: rgb(0, 0, 0);">[Also shows BinFile
+                    class in a SEPARATE namespace from programs].</span></small><br
+                  style="color: rgb(0, 0, 0);">
+                <span style="color: rgb(0, 0, 0);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+1b)&nbsp;
+the
+binary
+file
+is
+also
+a
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                </span><span style="font-weight: bold; color: rgb(0, 0,
+                  0);">random access</span><span style="color: rgb(0, 0,
+                  0);"> file (vs. sequential access).</span><br
+                  style="color: rgb(0, 0, 0);">
+                <span style="color: rgb(0, 0, 0);">&nbsp;&nbsp;&nbsp; 2)
+                  using <span style="font-weight: bold;">Serialization</span>
+                  (the <a href="SerializedBinaryFile.pdf">binary file<font
+                      size="-1"> (pdf)</font></a>).</span><br>
+                <span style="color: rgb(0, 0, 0);">&nbsp;&nbsp;&nbsp; 3)
+                  using byte arrays for a generic</span>,
+                language/system-portable file.<br>
+              </td>
+              <td style="vertical-align: top; background-color: rgb(255,
+                255, 204);"><span style="font-family: Comic Sans MS;
+                  color: rgb(255, 0, 0);"></span><a
+                  href="BinaryReaderWriter.zip">BinaryReaderWriter.zip</a>&nbsp;&nbsp;
+
+                <a href="files/BRWCreateProgram.cs"><font
+                    style="color: rgb(255, 0, 0);" size="-2"><span
+                      style="font-family: Comic Sans MS;">crPr.cs</span></font></a><font
+                  style="font-family: Comic Sans MS;" size="-2"><br>
+                  &nbsp; &nbsp; &nbsp; <a
+                    href="files/BRWDisplayProgram.cs"><span
+                      style="color: rgb(255, 0, 0);">displPr.cs</span></a>
+                  &nbsp; <a href="files/BRWBinFile.cs"><span
+                      style="color: rgb(255, 0, 0);">fileCl.cs</span></a></font><br>
+                <a href="BinRWRandom.zip">BinRWRandom.zip</a>&nbsp;&nbsp;
+                <a href="files/BRWRCreateProgram.cs"><font
+                    style="color: rgb(255, 0, 0);" size="-2"><span
+                      style="font-family: Comic Sans MS;">crPr.cs</span></font></a><font
+                  size="-1"><span style="font-family: Comic Sans MS;
+                    color: rgb(255, 0, 0);"></span></font><br>
+                <font style="font-family: Comic Sans MS;" size="-2">&nbsp;
+                  &nbsp; &nbsp; <a href="files/BRWRDisplayProgram.cs"><span
+                      style="color: rgb(255, 0, 0);">displPr.cs</span></a>
+                </font><font style="font-family: Comic Sans MS;"
+                  size="-2">&nbsp; <span style="color: rgb(255, 0, 0);"></span><a
+                    href="files/BRWRQueryProgram.cs"><span
+                      style="color: rgb(255, 0, 0);">queryPr.cs</span></a>&nbsp;&nbsp;</font><font
+                  style="font-family: Comic Sans MS;" size="-2"> <a
+                    href="files/BRWRBinFile.cs"><span style="color:
+                      rgb(255, 0, 0);">fileCl.cs</span></a></font><br>
+                <a href="CreateSerBinFile.zip">CreateSerBinFile.zip<font
+                    size="-1"><span style="font-family: Comic Sans MS;
+                      color: rgb(255, 0, 0);"></span></font></a>&nbsp;&nbsp;
+                <a href="files/SerBinFileCreateProg.cs"><font
+                    style="color: rgb(255, 0, 0);" size="-2"><span
+                      style="font-family: Comic Sans MS;">crPr.cs</span></font></a><br>
+                &nbsp; &nbsp; <span style="font-family: Comic Sans MS;"><span
+                    style="text-decoration: underline;"></span></span><font
+                  style="font-family: Comic Sans MS;" size="-2"><a
+                    href="files/SerBinFile.cs"><span style="color:
+                      rgb(255, 0, 0);">fileCl.cs</span></a> </font><font
+                  style="font-family: Comic Sans MS;" size="-2">&nbsp; <span
+                    style="color: rgb(255, 0, 0);"></span><a
+                    href="files/SerBinRec.cs"><span style="color:
+                      rgb(255, 0, 0);">recCl.cs</span></a></font><br>
+                <a href="GenericBinFile.html">GenericBinFile.zip</a>&nbsp;
+
+
+
+                <font size="-1"><span style="font-family: Comic Sans MS;
+                    color: rgb(255, 0, 0);">NOT LIVE</span></font> </td>
+            </tr>
+            <tr>
+              <td style="vertical-align: top; font-family: Comic Sans
+                MS; color: rgb(102, 51, 0);">9a<small><small><br>
+                  </small>&nbsp;<small><br>
+                  </small></small>9b<br>
+              </td>
+              <td style="vertical-align: top; background-color: rgb(255,
+                255, 204);"><span style="font-weight: bold; color:
+                  rgb(0, 0, 0);">Delete</span><span style="color: rgb(0,
+                  0, 0);"> a file, check if it </span><span
+                  style="font-weight: bold; color: rgb(0, 0, 0);">exists</span><span
+                  style="color: rgb(0, 0, 0);">, check file's </span><span
+                  style="font-weight: bold; color: rgb(0, 0, 0);">size</span><span
+                  style="color: rgb(0, 0, 0);"> (in bytes).</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp; <font style="color: rgb(0, 0,
+                  0);" size="-1">[IS THIS DANGEROUS. . . LETTING A
+                  PROGRAM DELETE A FILE?]</font><br style="color: rgb(0,
+                  0, 0);">
+                <span style="color: rgb(0, 0, 0); font-weight: bold;">Append</span><span
+                  style="color: rgb(0, 0, 0);"> to an output file.</span><br
+                  style="color: rgb(0, 0, 0);">
+                <small><span style="color: rgb(0, 0, 0);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    [Also shows using a LogFile class in a SEPARATE
+                    namespace].</span></small><br>
+              </td>
+              <td style="vertical-align: top; background-color: rgb(255,
+                255, 204);"><a href="DeleteAFile.zip">DeleteAFile.zip</a>&nbsp;&nbsp;
+
+                <a href="files/DeleteAFile.cs"><font style="color:
+                    rgb(255, 0, 0);" size="-2"><span style="font-family:
+                      Comic Sans MS;">pr.cs</span></font></a><br>
+                <br>
+                <a href="AppendingToAFile.zip">AppendingToAFile.zip</a>&nbsp;&nbsp;
+
+                <a href="files/AppendingToAFile.cs"><font
+                    style="color: rgb(255, 0, 0);" size="-2"><span
+                      style="font-family: Comic Sans MS;">pr.cs</span></font></a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <span style="color: rgb(255, 0, 0); font-family: Comic Sans MS;"></span><font
+          size="+1"><span style="font-family: Comic Sans MS; color:
+            rgb(255, 0, 0);"></span></font></div>
+      <div style="text-align: center;"><br>
+        <span style="color: rgb(255, 0, 0); font-family: Comic Sans MS;"><font
+            size="-2"><a href="mailto:donna.kaminski@wmich.edu"><span
+                style="color: rgb(0, 0, 0);">Donna Kaminski, Computer
+                Science Department</span></a>&nbsp;</font> &nbsp; </span><span
+          style="color: rgb(255, 0, 0); font-family: Comic Sans MS;"></span><br>
+      </div>
+    </div>
+    <br>
+  </body>
+
+<!-- Mirrored from homepages.wmich.edu/~kaminski/3310/csharp/CSharpExamples.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 15 Dec 2014 13:21:26 GMT -->
+</html>

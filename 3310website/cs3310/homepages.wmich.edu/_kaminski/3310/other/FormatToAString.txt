@@ -1,0 +1,44 @@
+Suppose several different programs/methods need to send various
+types of data, various numbers of data items, and using various
+formatting to some method (e.g., to be written to a Log file).
+
+The parameter sent could be a SINGLE STRING which is
+pre-formatted by the caller before it's sent, since the caller
+knows what to send, how many items, in what order, and with what
+formatting.
+
+String.Format and ToString methods are useful for this, i.e.,
+
+
+string message;		// parameter to be sent
+
+message = String.Format(. . .);
+	// using a format string & argument list
+	// 	or a concatenated list of items
+	// 	or a single item
+	// just as you'd do with a WriteLine
+
+// then send message as the parameter
+
+message = someVariable.ToString("...");
+	// where "..." is the formatting specification
+
+// then send message as the parameter
+
+
+------- for example ---------------------------------------------
+
+message = String.Format("{0}'s phone number is {1:###-####}",
+	"Mary", 3871000);
+
+message = String.Format("{0:0000}, {1:0000}, {2:0000}, {3:0000}",
+	1, 12, 1234, 0);
+
+double bigDouble = 123456789.123456789;
+message = bigDouble.ToString("C");
+
+long phone = 2693871000;
+message = phone.ToString("(###) ###-####");
+
+decimal money = .27M;
+message = money.ToString("000.##");

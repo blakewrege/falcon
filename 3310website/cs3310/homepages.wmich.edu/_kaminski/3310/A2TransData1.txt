@@ -1,0 +1,25 @@
+AN
+DN China
+DN Australia
+SN China
+SN Wallis
+SN Wallis and Futuna
+SN Wallis & Futuna
+SN Australia
+SN Zimbabwe
+SN Jordan
+SN Japan
+SN Liechtenstein
+SN London
+SN Albania
+SN Western Michigan University
+SN Zoo
+SN United
+SN Russian Federation
+SN Russian Federat
+SN Russian Federat of Mickey Mouse
+SN   (space) is < 0-9 (& so < A=Z)
+SN # is < 0-9 (& so < A-Z)
+SN = is > 0-9 & < A-Z
+SN ] is > A-Z & < a-z
+SN } is > a-z

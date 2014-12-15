@@ -1,0 +1,35 @@
+A solution for a bug encountered interacting with MySQL
+   using Visual Studio (any version from 2005~2012):
+
+
+When user tries to add "MySQL connection" using "Server Explorer",
+    the following 2 bugs might appear:
+
+Bug 1: in "Add Connection" Dialog,
+       "MySQL Database" does not appear in the list of "Data Source"
+
+The Fix:  Re-install MySQL .net Connector
+    (Delete .net MySQL connector -> Restart PC -> re-install)
+*note:  based on my research and trial, does not always work, but worth a try
+*note2: if this bug still happens after re-install, go to the steps below
+
+-----
+Bug 2: After choosing "MySQL Database",
+    in the next dialog where we need to enter information,
+    the DIALOG CLOSES when INPUTING ANYTHING 
+    (this includes trying to paste information)
+
+-ALTERNATIVE FIX-
+1) Go to this link --> http://dev.mysql.com/downloads/connector/net/
+2) At "Select Platform", choose ".NET & mono" and download the file shown
+3) Extract the file to a folder (any place that's easy to locate)
+4) Now, in visual basic (assuming your project is open),
+   right click "References" and click "add Reference"
+5) Click "browse",go to the extracted folder at "step 3)",
+   open the folder named "v4", choose "mysql.data.dll" and "mysql.web.dll".
+6) You can now add the following statement "using MySql.Data.MySqlClient"
+   and program normally
+
+
+
+[based on "the fix" from Davion Teh]

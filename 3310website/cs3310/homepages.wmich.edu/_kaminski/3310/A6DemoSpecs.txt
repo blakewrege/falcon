@@ -1,0 +1,29 @@
+Asgn 6 demo specs
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+DO THESE OPERATIONS IN THIS ORDER
+   - delete Log file
+   - delete MichiganMapData.bin file
+   - run Setup program
+   - run UserApp program
+   - print out Log file
+   - use a HexEditor to print out MichiganMapData.bin file
+   - print out your program files
+
+PACKET TO HAND IN - IN THIS ORDER
+   - cover page
+   - Log file printout (smaller font & landscape orientation
+         to save paper and avoid wrap-around for the big
+         PrettyPrint matrix part)
+   - HexEdit printout of MichiganMapData.bin file
+   - Setup program file
+   - UserApp program file
+   - MapData class file
+   - Route class file
+   - any other code files
+
+
+
+
+

@@ -1,0 +1,32 @@
+PROJECT DESIGN NOTES
+
+id, code & name all uniquely identify countries,
+  so one is chosen as the PK (PrimaryKey), 
+  the others are a CKs (CandidateKeys).
+  - Since code is the most commonly used key in
+    user queries, code is chosen as the PK.
+  - The PK is usually the basis for structuring
+    the actual data storage.
+  - If users frequently need to access the data
+    via a CK, then an index is constructed for that
+    key field.
+  - A3 users don’t want to do SI, DI, AI,
+    so no id index is built.
+  - A3 users want to to do SN, DN, AN – so nameIndex
+    is needed.
+
+A3 users don’t want to do AC (requiring key-sequential
+access), they just want to do SC, DC, IN (random access
+choice for structuring the data storage.
+
+A3 users don’t often have queries to access the data
+based on id,  population, size, continent or 
+lifeExpectancy – so no indexes are constructed for these.
+  - For the occasional queries involving these fields, 
+    linear search of the data is always feasible (though
+    generally has poor performance if relatively few 
+    records match the target conditions).
+  - For the occasional queries needing the records to 
+    appear in key-sequence on one of these fields, 
+    sorting is always feasible (though generally with 
+    poor performance). 

@@ -1,0 +1,12 @@
+This is the Scanner declaration I'm using for reading
+the .csv file.  I'm using the "ISO-8859-1" in the
+decoding part.
+
+Scanner scanReader
+  = new Scanner(new BufferedReader
+               (new InputStreamReader
+               (new FileInputStream
+               ((fileNamePrefix + "RawData.csv")), "ISO-8859-1")))
+
+
+(Claudy Mejia)

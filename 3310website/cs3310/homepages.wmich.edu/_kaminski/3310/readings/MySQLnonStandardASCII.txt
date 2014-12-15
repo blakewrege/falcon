@@ -1,0 +1,22 @@
+If countries with non-standard ASCII aren't recognized
+(i.e., you don't get 239 countries loaded), one student
+found the following would fix the problem:
+
+
+In MySql 5.5, when opening the command line the
+connection defaults to the Character Set utf8
+(this can be viewed by typing \s in the command line).
+Using "\C latin1" will change the Character set of
+the your connection to the server to latin1. Under the
+latin1 Character Set a large portion of the
+non-standard-ASCII characters will be implicitly
+converted to capital versions of stadard-ASCII characters
+(É to E). Since the database is created in default utf8
+(along with our connection in C#), the non-standar-ASCII
+character will still be stored, but for all purposes doing
+this will make the two characters indiscernible except
+by appearance (All searches for É will redirect to E while
+still displaying É in the output).
+
+tl;dr - type "\C latin1" before running the WorldDriver.sql
+file

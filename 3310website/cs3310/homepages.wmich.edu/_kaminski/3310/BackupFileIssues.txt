@@ -1,0 +1,37 @@
+Backup file issues:
+
+1) I don't care what the exact details are for the
+Backup file in terms of
+- text file or binary file
+- use <LF>'s or <CR><LF>'s after each line
+- use commas (or whatever) between fields
+- use fixed-length fields/records instead of
+  variable-length fields/records
+- dump array to file as a whole or in individual
+  records/fields
+- . . .
+AS LONG AS ALL THESE AGREE AS TO HOW TO HANDLE THINGS
+PrettyPrintUtility program
+dataTable.DumpToFile
+nameIndex.DumpToFile 
+dataTable.LoadFromFile
+nameIndex.LoadFromFile
+
+The demo specs won't have you actually showing me
+what the file looks like - only PrettyPrintUtility
+shows me what data is on the file.
+
+
+2)  You may add an extra field in the "header record"
+on Backup file so you have maxIdValue saved (besides n)
+so it can be used by PrettyPrintUtility and dataTable
+methods like selectAllById.  If you're using static
+arrays of size MAX_ARRAY_SIZE = 300, do NOT use the 300
+to control your loop, use maxIdValue (so you don't print
+out a bunch of empty's).  The only empty's I'd want to
+see are the embedded ones like 3,8,15,19,22 when using
+A1RawDataSample file (before any INSERT's are done by
+UserApp).
+
+You also shouldn't dump all 300 to the Backup file - 
+just dump the good-data-section.

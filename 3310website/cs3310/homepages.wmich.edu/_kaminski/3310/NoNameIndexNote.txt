@@ -1,0 +1,18 @@
+Some people had problems with the BST nameIndex
+in A2.  So as to not penalize these people further
+in A3, and to reduce the size of A3,
+
+NAME INDEX IS NO LONGER PART OF A3 PROJECT
+- no need to build the index (in Setup)
+- no need to save/restore the index (Backup file)
+    so no need to deal with a binary file here
+    (though CountryData is a binary file
+- no SN, AN, DN transactions in TransData file
+- IN transactions deal with dataTable, but not
+    nameIndex
+- PrettyPrintUtility won't print the Backup file
+
+--------------------------------
+I won't go back and change the specs.
+I'll just post this note on the website.
+

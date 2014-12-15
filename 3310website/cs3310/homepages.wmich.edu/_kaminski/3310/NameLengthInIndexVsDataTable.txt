@@ -1,0 +1,26 @@
+The name field in the dataTable has been padded or 
+   truncated to be EXACTLY 15 characters.
+That's because we need fixed-length record LOCATIONS
+   necessary for doing Direct Address on a FILE,
+   (so might as well have fixed-length RECORDS,
+    so might as well have fixed-length FIELDS).
+We did NOT need fixed-length record locations for asgn 1
+   because the dataTable was internal, using Direct
+   Address.  Locations in memory (an array) are specified
+   by referring to their subscripts, with the actual 
+   "records" being as long as they need to be (using 
+   variable-length records/fields).
+For a FILE, in Java/C#, you can't just seek to an RRN,
+   you have to seek to a byteOffset, since a file is
+   "really" (physically, to us as Java/C# application
+   programmers) a stream of bytes, physically.  (In other
+   languages like COBOL, you could "seek" to the RRN,
+   and the mapping to byteOffset is handled for you by
+   the system (as Java/C# get for arrays).
+
+--------------------------------------------------------
+The Name field in the nameIndex is, however, as long as
+   it was in the rawData file, with no padding or
+   truncating.
+nameIndex is internal, stored in an array(s), so we can
+   access records by specifying subscript.
